@@ -1,0 +1,33 @@
+.display__collections {
+	display: flex;
+	flex-direction: row;
+}
+.shopNow_button {
+	width: 120px;
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid #757575;
+	left: 45%;
+	right: 45%;
+	align-self: center;
+	z-index: 100;
+}
+.shopNow_button:hover {
+	background-color: #fb8c00;
+	color: white;
+}
+
+.collections {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.home__box {
+	align-items: center;
+}
+@media only screen and (max-width: 500px) {
+	h2 {
+		font-size: 1.2rem;
+	}
+}

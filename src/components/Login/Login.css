@@ -1,0 +1,107 @@
+.login_page {
+	background: url("https://images.pexels.com/photos/459486/pexels-photo-459486.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+		no-repeat center;
+
+	background-size: cover;
+	height: 100vh;
+	color: white;
+}
+.login-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	height: 100%;
+	width: 30%;
+	align-items: center;
+	background-color: #eeeeee;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	border: 1px solid #9e9e9e;
+	background-repeat: no-repeat;
+
+	background-size: cover;
+}
+
+.in-form-field,
+.btn_login {
+	color: #757575;
+	height: 40px;
+	width: 80%;
+	border-radius: 10px;
+	line-height: 1rem;
+	margin-bottom: 10px;
+	border: "1px solid transparent";
+	text-align: center;
+}
+.btn_login {
+	width: 40%;
+}
+.btn_login:hover,
+.in-form-field:hover {
+	color: white;
+	background-color: #fb8c00;
+}
+
+@media only screen and (max-width: 567px) {
+	.login-form {
+		background-image: url("https://images.pexels.com/photos/3552520/pexels-photo-3552520.jpeg?cs=srgb&dl=pexels-breston-kenya-3552520.jpg&fm=jpg");
+		opacity: 0.8;
+		width: 50%;
+		font-size: 12px;
+	}
+
+	.in-form-field,
+	.btn_login {
+		height: 30px;
+		font-size: 12;
+	}
+}
+
+@media only screen and (min-width: 568px) {
+	.login-form {
+		background-image: url("https://images.pexels.com/photos/3552520/pexels-photo-3552520.jpeg?cs=srgb&dl=pexels-breston-kenya-3552520.jpg&fm=jpg");
+		opacity: 0.8;
+		width: 50%;
+		font-size: 14px;
+	}
+	.in-form-field {
+		height: 30px;
+	}
+}
+
+@media only screen and (mix-width: 768px) {
+	.login-form {
+		background-image: url("https://images.pexels.com/photos/3552520/pexels-photo-3552520.jpeg?cs=srgb&dl=pexels-breston-kenya-3552520.jpg&fm=jpg");
+		opacity: 0.8;
+		font-size: 14px;
+	}
+	.in-form-field {
+		height: 40px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.login-form {
+		background-image: url("https://images.pexels.com/photos/809433/pexels-photo-809433.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+		opacity: 0.8;
+		font-size: 14px;
+	}
+	.in-form-field {
+		height: 40px;
+	}
+}
+@media only screen and (min-width: 1366px) {
+	.login-form {
+		background-image: url("https://images.pexels.com/photos/809433/pexels-photo-809433.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+		opacity: 0.8;
+		font-size: 14px;
+	}
+	.in-form-field {
+		height: 40px;
+	}
+}

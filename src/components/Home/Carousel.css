@@ -1,0 +1,4 @@
+.carousel__image > img {
+	height: 350px;
+	object-fit: contain;
+}

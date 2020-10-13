@@ -1,0 +1,111 @@
+.wrapper {
+	width: 400px;
+	height: 550px;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.wrapper img {
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	animation: showMe 0.8s linear infinite 0s forwards;
+	animation-play-state: paused;
+}
+.wrapper img:nth-child(1) {
+	z-index: 9;
+}
+.wrapper img:nth-child(2) {
+	animation-delay: 1s;
+	z-index: 8;
+}
+.wrapper img:nth-child(3) {
+	animation-delay: 0.9s;
+	z-index: 7;
+}
+.wrapper img:nth-child(4) {
+	animation-delay: 0.8s;
+	z-index: 6;
+}
+.wrapper img:nth-child(5) {
+	animation-delay: 0.7s;
+	z-index: 5;
+}
+.wrapper img:nth-child(6) {
+	animation-delay: 0.6s;
+	z-index: 4;
+}
+.wrapper img:nth-child(7) {
+	animation-delay: 0.5s;
+	z-index: 3;
+}
+.wrapper img:nth-child(8) {
+	animation-delay: 0.4s;
+	z-index: 2;
+}
+.wrapper:hover img {
+	animation-play-state: running;
+}
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 500;
+	background: rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3) inset;
+	pointer-events: none;
+	transition: all 0.3s linear;
+}
+.overlay span {
+	display: block;
+	padding: 20px;
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	top: 10px;
+	color: #fff;
+	align-items: center;
+	align-self: center;
+	box-sizing: border-box;
+	font-size: 38px;
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	text-align: center;
+	pointer-events: none;
+}
+.wrapper:hover .overlay {
+	opacity: 1;
+	box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3) inset;
+}
+
+@keyframes showMe {
+	0% {
+		visibility: visible;
+		z-index: 100;
+	}
+	12.5% {
+		visibility: visible;
+		z-index: 50;
+	}
+	25% {
+		visibility: hidden;
+		z-index: 0;
+	}
+	100% {
+		visibility: hidden;
+		z-index: 0;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.wrapper {
+		height: 280px;
+	}
+	.overlay span {
+		font-size: 20px;
+	}
+}

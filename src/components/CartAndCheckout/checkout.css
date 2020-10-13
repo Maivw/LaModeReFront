@@ -1,0 +1,39 @@
+.checkoutBox {
+	width: 50%;
+	height: 50%;
+	margin-top: 2%;
+	border: 1px solid#757575;
+	padding: 20;
+	line-height: 2rem;
+}
+.btn__placeYourOrder {
+	align-self: center !important;
+	text-align: center !important;
+	margin-left: 15% !important;
+	margin-top: 15px !important;
+	color: #757575 !important;
+}
+.totalOrder {
+	width: 60%;
+	align-self: center;
+	text-align: center;
+	margin-left: 25%;
+}
+.paypal__button {
+	padding-right: 35px !important;
+	padding-top: 10px !important;
+}
+
+@media only screen and (max-width: 500px) {
+	.paypal__button {
+		padding: 30px !important;
+	}
+	.checkoutBox {
+		font-size: 0.8rem;
+		margin-top: 20px;
+	}
+	.btn__placeYourOrder {
+		margin-left: 20% !important;
+		font-size: 0.8rem !important;
+	}
+}

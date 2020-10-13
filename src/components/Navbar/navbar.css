@@ -1,0 +1,76 @@
+.brandName__text {
+	font-size: 3rem;
+}
+.brandName__text:hover {
+	color: #f57c00;
+}
+#navbar {
+	background-color: black;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	height: 180px;
+	width: 100%;
+}
+
+.navbar-2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+#navbar__allproducts {
+	color: white;
+	text-decoration: none;
+}
+
+.navbar__icons,
+.navbar__categories {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.navbar__icons {
+	align-content: center;
+}
+.brandName,
+.navbar__btn--logout,
+.navbar__btn--login,
+.navbar__btn--signup {
+	text-align: center;
+	flex-direction: row;
+	color: white;
+}
+.navbar__btn--login:hover,
+.navbar__btn--signup:hover,
+.navbar__btn--logout:hover {
+	color: #fb8c00;
+}
+.navbar__btn--loginAndSignup {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+#navbar__allproducts:hover,
+.navbar__inforAuthor > a:hover {
+	color: #fb8c00;
+}
+.navbar__logo {
+	align-self: center;
+}
+.navbar__logo--image {
+	width: 100px;
+	height: 100px;
+}
+
+.navbar__icons--bag,
+.navbar__icons--account,
+.navbar__icons--favorite {
+	color: white;
+}
+.MuiPaper-root {
+	height: 105px;
+	margin-left: 15px;
+	align-content: center;
+}

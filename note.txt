@@ -1,0 +1,28 @@
+export const signup = (params) => async (dispatch) => {
+	const response = await fetch(`http://localhost:8080/users`, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify({
+			email: params.email,
+			username: params.username,
+			firstName: params.firstName,
+			lastName: params.lastname,
+			phoneNum: params.phoneNum,
+			password: params.password,
+			confirmPassword: params.confirmPassword,
+		}),
+	});
+	if (response.ok) {
+		const { token } = await response.json();
+		window.localStorage.setItem(TOKEN_KEY, token);
+		dispatch(setToken(token));
+	}
+};
+
+
+get hashpassword
+https://repl.it/@MAIVW/get-hash-password#index.js
+
+const bcrypt = require("bcryptjs");
+
+bcrypt.hash('password', 10).then(rs => console.log('zzz', rs));

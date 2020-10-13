@@ -1,0 +1,16 @@
+.pagination {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.pageItem {
+	padding: 20%;
+}
+
+@media only screen and (max-width: 500px) {
+	.pageItem {
+		padding: 2%;
+	}
+}

@@ -1,0 +1,16 @@
+.checkout {
+	text-decoration: none;
+	color: black;
+}
+.checkout:hover {
+	color: #fb8c00;
+}
+.quantity__bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: white;
+	text-align: center;
+	padding-top: 5px;
+	border-radius: 5px;
+}
