@@ -3,7 +3,7 @@
 A shopping cart app that allows fashion lovers to purchase products made by LaMode.
 
 <p align="center">
-  <img src="https://github.com/Maivw/LaMode-front2/blob/master/recordingLaMode.gif?raw=true"/>
+  <img src="https://github.com/Maivw/LaModeReFront/blob/master/recordingLM.gif?raw=true"/>
 </p>
 
 ## [Live site](https://lamodefrontend2.herokuapp.com)
