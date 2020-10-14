@@ -2,7 +2,7 @@ import { create } from "axios";
 import { store } from "../index";
 
 const api = create({
-	baseURL: "https://lamodebackend2.herokuapp.com",
+	baseURL: "https://lamodebackend.herokuapp.com/",
 	headers: {
 		Accept: "application/json",
 		"Content-Type": "application/json",
