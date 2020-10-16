@@ -43,6 +43,7 @@ export const filterProducts = (params) => (dispatch) => {
 };
 
 export const getOneProduct = (id, params) => async (dispatch) => {
+	debugger;
 	const result = await axios.get(`/products/${id}`, params);
 	dispatch(getCurrentProduct(result.data.product));
 };

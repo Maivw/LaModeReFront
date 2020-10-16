@@ -2,15 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Popover from "@material-ui/core/Popover";
-// import div from "@material-ui/core/div";
 import "./modal.css";
 
 const useStyles = makeStyles((theme) => ({
 	typography: {
 		padding: theme.spacing(2),
 		backgroundColor: "#e0e0e0",
-		width: 300,
 		alignItems: "center",
+		width: 300,
 	},
 }));
 
@@ -30,7 +29,7 @@ export default function ModalMenProduct(props) {
 	const id = open ? "simple-popover" : undefined;
 
 	return (
-		<div className="navbar--modal">
+		<div>
 			<div
 				aria-describedby={id}
 				variant="contained"

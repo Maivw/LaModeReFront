@@ -6,7 +6,7 @@
 	width: 120px;
 	height: 40px;
 	border-radius: 5px;
-	border: 1px solid #757575;
+	border: 1px solid white;
 	left: 45%;
 	right: 45%;
 	align-self: center;
@@ -15,6 +15,7 @@
 .shopNow_button:hover {
 	background-color: #fb8c00;
 	color: white;
+	border: 1px solid #fb8c00;
 }
 
 .collections {

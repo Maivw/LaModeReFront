@@ -1,6 +1,7 @@
 .navbar--modal {
 	display: flex;
 	flex-direction: row;
+	align-self: center;
 }
 .navbar--modal:first-child:hover {
 	color: #fb8c00;
