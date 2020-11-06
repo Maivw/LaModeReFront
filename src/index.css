@@ -4,6 +4,9 @@ body {
 	margin: 0;
 	color: #757575;
 	width: 100vw;
+	font-family: 'Poppins', sans-serif;
+	background-color: #F2F3F5;
+	font-size: 18px;
 }
 
 .cursor {

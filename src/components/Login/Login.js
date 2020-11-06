@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Login(props) {
-	const classes = useStyles();
 	const [email, setEmail] = useState("DemoUser@demo.com");
 	const [password, setPassword] = useState("password");
 	const token = useSelector((state) => state.authentication.token);
@@ -40,53 +39,48 @@ export default function Login(props) {
 		return <Redirect to="/" />;
 	}
 	return (
-		<Grid container spacing={3} className="login_page">
-			<Grid item xs={12} sm={6}>
-				<form className="login-form" onSubmit={handleSubmit}>
-					<h4>We are La_Mode</h4>
-					<p>
-						Welcome back! Log in to your account
-						<br></br>
-						to view our trending items.
-					</p>
-
+		<div className="login">
+			<div class="login__brand">
+				<span class="login__brand-text">LaMode</span>
+			</div>
+			<h1 className="login__heading">Sign In</h1>
+			<form className="login__form" autocomplete="off" onSubmit={handleSubmit}>
+				<div className="form__group">
+					<label forHTML="email" class="form__label">
+						Email
+					</label>
 					<input
-						className="in-form-field"
+						className="form__input"
 						type="text"
 						name="email"
 						placeholder="Email"
 						value={email}
 						onChange={updateEmail}
 					/>
-
+				</div>
+				<div className="form__group">
+					<label forHTML="password" class="form__label">
+						Password
+					</label>
 					<input
-						className="in-form-field"
+						className="form__input"
 						type="password"
 						name="password"
 						placeholder="Password"
 						value={password}
 						onChange={updatePassword}
 					/>
-					<button className="btn_login">LOG IN</button>
-
-					<h3>
-						You need an account?
-						<span>
-							<Link
-								style={{
-									textDecoration: "none",
-									color: "white",
-									marginLeft: 10,
-								}}
-								className="sign-up"
-								to="/signup"
-							>
-								SIGNUP
-							</Link>
-						</span>
-					</h3>
-				</form>
-			</Grid>
-		</Grid>
+				</div>
+				<button className="btn__login">Log in</button>
+				<p className="signup">
+					You need an account ?
+					<span>
+						<Link className="signup__link" to="/signup">
+							Sign up
+						</Link>
+					</span>
+				</p>
+			</form>
+		</div>
 	);
 }

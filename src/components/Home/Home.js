@@ -7,6 +7,7 @@ import Collection from "./CollectionFall";
 import CollectionWinter from "./CollectionWinter";
 import CollectionSpring from "./CollectionSpring";
 import Grid from "@material-ui/core/Grid";
+import Footer from "./Footer";
 
 export default function Home(props) {
 	return (
@@ -55,6 +56,7 @@ export default function Home(props) {
 					</Grid>
 				</Grid>
 			</div>
+			<Footer />
 		</div>
 	);
 }

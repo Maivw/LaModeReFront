@@ -5,12 +5,12 @@ function Collection() {
 	return (
 		<div className="wrapper">
 			<img
-				src="https://res.cloudinary.com/maivw/image/upload/v1602128395/6_tt2joh.jpg"
-				alt="image02"
-			/>
-			<img
 				src="https://res.cloudinary.com/maivw/image/upload/v1602128395/3_sl3kmn.jpg"
 				alt="image06"
+			/>
+			<img
+				src="https://res.cloudinary.com/maivw/image/upload/v1602128395/6_tt2joh.jpg"
+				alt="image02"
 			/>
 			<img
 				src="https://res.cloudinary.com/maivw/image/upload/v1602128395/1_b0cfdi.jpg"
