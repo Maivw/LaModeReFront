@@ -5,17 +5,19 @@
 .shopNow_button {
 	width: 120px;
 	height: 40px;
-	border-radius: 5px;
-	border: 1px solid white;
-	left: 45%;
-	right: 45%;
+	border-radius: 25px;
+	border: 1px solid #fb8c00;
+	left: 50%;
+	right: 50%;
+	
 	align-self: center;
 	z-index: 100;
+	color: #757575;
 }
 .shopNow_button:hover {
 	background-color: #fb8c00;
 	color: white;
-	border: 1px solid #fb8c00;
+	border: none;
 }
 
 .collections {
@@ -26,7 +28,47 @@
 
 .home__box {
 	align-items: center;
+	padding: 0 10%;
+	clip-path: circle(50% at 50% 50%);
+	background-color: #F2F3F5;
+	position: relative;
 }
+.home__box-img{
+	 width: 55%;
+}
+.home__box-carousel {
+	z-index: 1;
+	width: 380px;
+	margin-left: 60%;
+	margin-top: 5%;
+	position: absolute;
+
+}
+
+.home__box-colectionText {
+	background-color: #bdbdbd;
+	width: 200px;
+	padding: 10px 0px 10px 0px;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	z-index: 1;
+	margin-left: 60%;
+	margin-top: 25%;
+	position: absolute;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	
+}
+.home__box-colections {
+	display: flex;
+	flex-direction: row;
+	margin-left: 47%;
+	margin-top: 30%;
+	position: absolute;
+	z-index: 2;
+}
+
 @media only screen and (max-width: 500px) {
 	h2 {
 		font-size: 1.2rem;

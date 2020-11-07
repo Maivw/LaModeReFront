@@ -1,4 +1,14 @@
 .carousel__image > img {
-	height: 350px;
+	height: 200px;
 	object-fit: contain;
+	border-radius: 20px;
+}
+
+.slick-prev:before {
+	color: #757575;
+	margin-left: -20px;
+}
+.slick-next:before {
+	color: #757575;
+	margin-left: -130px;
 }

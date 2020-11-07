@@ -26,3 +26,5 @@ https://repl.it/@MAIVW/get-hash-password#index.js
 const bcrypt = require("bcryptjs");
 
 bcrypt.hash('password', 10).then(rs => console.log('zzz', rs));
+https://dribbble.com/shots/6377914-Rouge-Fashion-Web-UI/attachments/6377914?mode=media
+https://dribbble.com/shots/1817911/attachments/301239?mode=media
