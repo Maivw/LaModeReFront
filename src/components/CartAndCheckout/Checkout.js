@@ -88,7 +88,7 @@ export default function Checkout(props) {
 						<div style={{ width: "50%", marginLeft: "5%" }}>
 							Shipping to:
 							<input
-								style={{ width: "175%", height: 30 }}
+								style={{ width: "175%", height: 30, borderRadius: 25 }}
 								type="text"
 								placeholder="Type location"
 								name="shippingAddress"

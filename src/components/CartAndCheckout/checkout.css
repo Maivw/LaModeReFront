@@ -13,6 +13,10 @@
 	margin-top: 15px !important;
 	color: #757575 !important;
 }
+.MuiButtonBase-root .MuiButton-root .MuiButton-contained .btn__placeYourOrder {
+	border: 25px !important;
+
+}
 .totalOrder {
 	width: 60%;
 	align-self: center;

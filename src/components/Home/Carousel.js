@@ -73,6 +73,9 @@ export default function Carousel() {
 	return (
 		<div>
 			<Slider {...settings}>
+				<div className="carousel__image" onClick={showGirlTops}>
+					<img src="https://afamilycdn.com/2017/img20170906143707368.jpg" />
+				</div>
 				<div className="carousel__image" onClick={showWomenDresses}>
 					<img src="https://res.cloudinary.com/maivw/image/upload/v1601430866/LamodeWomenDress_jgdx0d.jpg" />
 				</div>
@@ -88,9 +91,6 @@ export default function Carousel() {
 				</div>
 				<div className="carousel__image" onClick={showGirlDresses}>
 					<img src="https://images.pexels.com/photos/4711724/pexels-photo-4711724.jpeg?cs=srgb&dl=pexels-cottonbro-4711724.jpg&fm=jpg" />
-				</div>
-				<div className="carousel__image" onClick={showGirlTops}>
-					<img src="https://afamilycdn.com/2017/img20170906143707368.jpg" />
 				</div>
 			</Slider>
 		</div>

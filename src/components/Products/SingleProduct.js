@@ -76,7 +76,7 @@ export default function SingleProduct(props) {
 								backgroundColor: "#e0e0e0",
 								textAlign: "center",
 								paddingTop: 5,
-								borderRadius: 5,
+								borderRadius: 25,
 							}}
 						>
 							<span>
