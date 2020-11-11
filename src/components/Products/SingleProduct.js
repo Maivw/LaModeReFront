@@ -38,47 +38,64 @@ export default function SingleProduct(props) {
 	};
 
 	return (
-		<div>
+		<div style={{ backgroundColor: "#eeeeee" }}>
 			<Navbar />
 			{product && (
 				<div className="fluid">
-					<div className="fluid__image-container">
-						<ReactImageMagnify
-							{...{
-								smallImage: {
-									alt: "Dress",
-									isFluidWidth: true,
-									src: `${product.photo}`,
-								},
-								largeImage: {
-									src: `${product.photo}`,
-									width: 1200,
-									height: 1800,
-								},
-							}}
-						/>
+					<div className="fluid__image">
+						<div className="fluid__image-container" style={{ width: "60%" }}>
+							<ReactImageMagnify
+								{...{
+									smallImage: {
+										alt: "Dress",
+										isFluidWidth: true,
+										src: `${product.photo}`,
+									},
+									largeImage: {
+										src: `${product.photo}`,
+										width: 1200,
+										height: 1800,
+									},
+								}}
+							/>
+						</div>
+						<div className="fluid__image-moreImages">
+							<div className="fluid__image-moreImages-item">
+								{product.smallerPhotos.map((photo) => (
+									<img src={photo} alt="photo" />
+								))}
+							</div>
+						</div>
 					</div>
+
 					<div className="fluid__detail">
-						<h2>{product.productName}</h2>
-						<p>Code: {product.productCode}</p>
-						<p>
-							Price: <span>$</span>
-							{product.price}{" "}
+						<p className="fluid__detail--productName">{product.productName}</p>
+						<p className="fluid__detail--productPrice">
+							<span>$</span>
+							{product.price}
 						</p>
-						<p>Color: {product.color}</p>
-						<p>Description: {product.description}</p>
+
+						<p>
+							Code:
+							<span className="fluid__detail--productCode">
+								{product.productCode}
+							</span>
+						</p>
+
+						<p>
+							Color:
+							<span className="fluid__detail--productColor">
+								{product.color}
+							</span>
+						</p>
+						<p>
+							Description:
+							<span className="fluid__detail--productDescription">
+								{product.description}
+							</span>
+						</p>
 						<p>Quantity:</p>
-						<div
-							style={{
-								display: "flex",
-								flexDirection: "row",
-								justifyContent: "space-evenly",
-								backgroundColor: "#e0e0e0",
-								textAlign: "center",
-								paddingTop: 5,
-								borderRadius: 25,
-							}}
-						>
+						<div className="quantity__bar">
 							<span>
 								<AddIcon onClick={handleAddQuantity} />
 							</span>
@@ -86,10 +103,9 @@ export default function SingleProduct(props) {
 							<span>
 								<RemoveIcon onClick={handleSubQuantity} />
 							</span>
-							<ShoppingBasketIcon
-								onClick={handleAddToCart}
-								style={{ color: "black" }}
-							/>
+						</div>
+						<div className="button__addToCart">
+							<button onClick={handleAddToCart}>Add to cart</button>
 						</div>
 					</div>
 				</div>

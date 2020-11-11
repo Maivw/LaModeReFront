@@ -1,4 +1,9 @@
-
+.center {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 2%;
+}
 .collections {
 	display: flex;
 	justify-content: center;
@@ -36,7 +41,7 @@
 	border-bottom-left-radius: 25px;
 	z-index: 1;
 	margin-left: 60%;
-	margin-top: 45%;
+	margin-bottom: 45%;
 	position: absolute;
 	color: white;
 	font-size: 16px;
@@ -46,10 +51,14 @@
 .home__box-colections {
 	display: flex;
 	flex-direction: row;
-	margin-left: 47%;
-	margin-top: 50%;
-	position: absolute;
 	z-index: 2;
+	align-content: center;
+	width: 80%;
+	align-self: center;
+	
+}
+.home__box--footer {
+	margin-top: 50px;
 }
 .shopNow_button {
 	width: 120px;

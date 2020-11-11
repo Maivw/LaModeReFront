@@ -20,8 +20,11 @@ import "./CartScreen.css";
 
 const StyledTableCell = withStyles((theme) => ({
 	head: {
-		backgroundColor: "#363A40",
-		color: theme.palette.common.white,
+		backgroundColor: "#f5f5f5",
+		color: "#363A40",
+		borderTopLeftRadius: "25px",
+		borderTopRightRadius: "25px",
+		zIndex: 100,
 	},
 	body: {
 		fontSize: 14,

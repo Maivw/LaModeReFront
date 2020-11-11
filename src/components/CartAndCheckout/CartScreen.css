@@ -1,11 +1,12 @@
 .checkout {
 	text-decoration: none;
-	color: black;
+	color: #757575;
 }
 .checkout:hover {
 	color: #fb8c00;
 }
 .quantity__bar {
+	width: 150px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -13,4 +14,5 @@
 	text-align: center;
 	padding-top: 5px;
 	border-radius: 25px;
+	margin-left: 25%;
 }

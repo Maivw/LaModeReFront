@@ -35,18 +35,23 @@ export default function Home(props) {
 			<div className="home__box-carousel">
 				<Carousel />
 			</div>
-			<p className="home__box-colectionText">Coming soon ...</p>
-			<div className="home__box-colections">
-				<Collection />
-				<CollectionWinter />
-				<CollectionSpring />
-			</div>
-			<Footer />
+
 			<div className="home__box">
 				<img
 					className="home__box-img"
 					src="https://res.cloudinary.com/maivw/image/upload/v1604714491/pexels-konstantin-mishchenko-1926769_b99lis.jpg"
 				/>
+			</div>
+			<div className="center">
+				<p className="home__box-colectionText">Coming soon ...</p>
+				<div className="home__box-colections">
+					<Collection />
+					<CollectionWinter />
+					<CollectionSpring />
+				</div>
+				<div className="home__box--footer">
+					<Footer />
+				</div>
 			</div>
 		</div>
 	);

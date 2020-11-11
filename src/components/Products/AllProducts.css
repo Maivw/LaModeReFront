@@ -1,13 +1,19 @@
-.allProducts__box--head {
-	display: flex !important;
-	justify-content: space-evenly !important;
-	vertical-align: center !important;
-	width: 90% !important;
-	height: 120px !important;
-	font-size: 12px !important;
-	align-self: center !important;
-}
 
+.filter__text {
+	color: #363A40;
+	font-size: 1.5rem;
+	font-weight: 200;
+	
+}
+.filter__box {
+	align-self: center;
+	width: 90%;
+}
+.pagination__box p {
+	color: #363A40;
+	margin-left: 10px;
+	font-weight: 300;
+}
 @media only screen and (max-width: 500px) {
 	.allProducts__box--head {
 		height: 160px !important;
