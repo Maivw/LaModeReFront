@@ -110,22 +110,22 @@ function ProductOnSale(props) {
 											<strong>
 												<span
 													style={{
-														color: "black",
+														color: "#363A40",
 														textDecoration: "line-through",
-														fontSize: "0.8rem",
+														fontSize: "13px",
 													}}
 												>
 													$
 													{product.price +
 														product.price * product.promotion * 0.01}
 												</span>
-												<span style={{ color: "red", marginLeft: 10 }}>
+												<span style={{ color: "#fb8c00", marginLeft: 10 }}>
 													${product.price}
 												</span>
 												<span
 													style={{
-														color: "black",
-														fontSize: "0.8rem",
+														color: "#363A40",
+														fontSize: "13px",
 														marginLeft: 10,
 													}}
 												>
@@ -140,7 +140,7 @@ function ProductOnSale(props) {
 											>
 												<StarIcon
 													className={classes.title}
-													style={{ color: fav ? "black" : "#bdbdbd" }}
+													style={{ color: fav ? "#fb8c00" : "#bdbdbd" }}
 													onClick={handleLike(product)}
 												/>
 											</IconButton>

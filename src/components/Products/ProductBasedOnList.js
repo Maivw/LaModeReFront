@@ -113,12 +113,12 @@ function ProductBasedOnList(props) {
 											<strong>
 												{product.promotion <= 0 ? (
 													<>
-														<span style={{ color: "black" }}>
+														<span style={{ color: "#363A40" }}>
 															${product.price}
 															<span
 																style={{
-																	color: "black",
-																	fontSize: "0.8rem",
+																	color: "#363A40",
+																	fontSize: "13px",
 																	marginLeft: 10,
 																}}
 															>
@@ -130,22 +130,22 @@ function ProductBasedOnList(props) {
 													<strong>
 														<span
 															style={{
-																color: "black",
+																color: "#363A40",
 																textDecoration: "line-through",
-																fontSize: "0.8rem",
+																fontSize: "13px",
 															}}
 														>
 															$
 															{product.price +
 																product.price * product.promotion * 0.01}
 														</span>
-														<span style={{ color: "red", marginLeft: 10 }}>
+														<span style={{ color: "#fb8c00", marginLeft: 10 }}>
 															${product.price}
 														</span>
 														<span
 															style={{
-																color: "black",
-																fontSize: "0.8rem",
+																color: "#363A40",
+																fontSize: "13px",
 																marginLeft: 10,
 															}}
 														>
@@ -163,7 +163,7 @@ function ProductBasedOnList(props) {
 											>
 												<StarIcon
 													className={classes.title}
-													style={{ color: fav ? "black" : "#bdbdbd" }}
+													style={{ color: fav ? "#fb8c00" : "#bdbdbd" }}
 												/>
 											</IconButton>
 										}

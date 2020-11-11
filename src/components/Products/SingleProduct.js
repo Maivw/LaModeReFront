@@ -97,11 +97,17 @@ export default function SingleProduct(props) {
 						<p>Quantity:</p>
 						<div className="quantity__bar">
 							<span>
-								<AddIcon onClick={handleAddQuantity} />
+								<AddIcon
+									onClick={handleAddQuantity}
+									style={{ cursor: "pointer" }}
+								/>
 							</span>
 							<div style={{ textAlign: "center" }}> {count}</div>
 							<span>
-								<RemoveIcon onClick={handleSubQuantity} />
+								<RemoveIcon
+									onClick={handleSubQuantity}
+									style={{ cursor: "pointer" }}
+								/>
 							</span>
 						</div>
 						<div className="button__addToCart">

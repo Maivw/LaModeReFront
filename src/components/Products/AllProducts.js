@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts, likeProudct } from "../../reducers/productManagement";
+import { addToCart } from "../../reducers/cartManagement";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -13,6 +14,7 @@ import StarIcon from "@material-ui/icons/Star";
 import Navbar from "../Navbar/Navbar";
 import Paginations from "./Pagination";
 import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
+import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import "./AllProducts.css";
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -87,6 +89,9 @@ function AllProducts(props) {
 	const onFilterAndSort = (sortFilter) => setFilterAndSort(sortFilter);
 	const handleLike = (product) => () => {
 		dispatch(likeProudct(product));
+	};
+	const insertItemIntoCart = (p, count) => () => {
+		dispatch(addToCart(p, count));
 	};
 
 	const indexOfLastItem = currentPage * itemsPerPage;
@@ -212,17 +217,35 @@ function AllProducts(props) {
 													</strong>
 												}
 												actionIcon={
-													<>
+													<div
+														style={{
+															display: "flex",
+															flexDirection: "row",
+														}}
+													>
 														<IconButton
 															aria-label={`star `}
 															className={classes.icon}
 															onClick={handleLike(product)}
 														>
 															<StarIcon
-																style={{ color: fav ? "#fb8c00" : "#bdbdbd" }}
+																style={{
+																	color: fav ? "#fb8c00" : "#bdbdbd",
+																	marginLeft: -20,
+																}}
 															/>
 														</IconButton>
-													</>
+														<IconButton>
+															<ShoppingBasketIcon
+																style={{
+																	color: "#363A40",
+																	cursor: "pointer",
+																	marginRight: 5,
+																}}
+																onClick={insertItemIntoCart(product, count)}
+															/>
+														</IconButton>
+													</div>
 												}
 											/>
 										</GridListTile>

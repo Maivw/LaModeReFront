@@ -18,6 +18,7 @@
 	vertical-align: center;
 	text-align: center;
 	border-radius: 50%;
+	cursor: pointer;
 	
 }
 .filter__sizes--item span {
@@ -38,6 +39,7 @@ font-weight: 500;
 	border: 1px solid #bdbdbd;
 	padding: 0 10px;
 	color: #363A40;
+	cursor: pointer;
 }
 
 /* @media only screen and (max-width: 500px) {

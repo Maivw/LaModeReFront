@@ -109,16 +109,25 @@ export default function CartScreen(props) {
 												src={p.photo}
 												alt={p.productName}
 											/>
-											<DeleteIcon onClick={handleRemoveFromCart(p)} />
+											<DeleteIcon
+												onClick={handleRemoveFromCart(p)}
+												style={{ color: "#363A40", cursor: "pointer" }}
+											/>
 										</StyledTableCell>
 										<StyledTableCell align="center">
 											<div className="quantity__bar">
 												<span>
-													<AddIcon onClick={handleAddQuantityInCart(p)} />
+													<AddIcon
+														onClick={handleAddQuantityInCart(p)}
+														style={{ cursor: "pointer" }}
+													/>
 												</span>
 												<div style={{ textAlign: "center" }}> {p.count}</div>
 												<span>
-													<RemoveIcon onClick={handleSubQuantityInCart(p)} />
+													<RemoveIcon
+														onClick={handleSubQuantityInCart(p)}
+														style={{ cursor: "pointer" }}
+													/>
 												</span>
 											</div>
 										</StyledTableCell>
