@@ -15,6 +15,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import LocalAtmIcon from "@material-ui/icons/LocalAtm";
+import Button from "@material-ui/core/Button";
 import { Redirect } from "react-router-dom";
 import "./CartScreen.css";
 
@@ -25,6 +26,7 @@ const StyledTableCell = withStyles((theme) => ({
 		borderTopLeftRadius: "25px",
 		borderTopRightRadius: "25px",
 		zIndex: 100,
+		fontFamily: "Poppins",
 	},
 	body: {
 		fontSize: 14,
@@ -36,6 +38,7 @@ const StyledTableRow = withStyles((theme) => ({
 		"&:nth-of-type(odd)": {
 			backgroundColor: theme.palette.action.hover,
 		},
+		fontFamily: "Poppins",
 	},
 }))(TableRow);
 
@@ -132,10 +135,15 @@ export default function CartScreen(props) {
 											</div>
 										</StyledTableCell>
 										<StyledTableCell align="center">
-											<div> ${p.price}</div>
+											<div style={{ color: "#757575", fontSize: 13 }}>
+												{" "}
+												${p.price}
+											</div>
 										</StyledTableCell>
 										<StyledTableCell align="center">
-											<div>${p.count * p.price}</div>
+											<div style={{ color: "#757575", fontSize: 13 }}>
+												${p.count * p.price}
+											</div>
 										</StyledTableCell>
 									</StyledTableRow>
 								);
@@ -157,11 +165,11 @@ export default function CartScreen(props) {
 							<TableBody>
 								<TableRow>
 									<StyledTableCell style={{ width: "25%" }}>
-										<Link
-											to="/checkout"
-											style={{ textDecoration: "none", color: "black" }}
-										>
-											<strong className="checkout">Check out</strong>
+										<Link to="/checkout" style={{ textDecoration: "none" }}>
+											<Button className="btn__checkout">
+												<span style={{ textTransform: "uppercase" }}>C</span>
+												heck out
+											</Button>
 										</Link>
 									</StyledTableCell>
 									<StyledTableCell style={{ width: "25%" }}></StyledTableCell>

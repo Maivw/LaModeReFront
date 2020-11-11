@@ -1,3 +1,4 @@
+
 .checkout__box {
 	width: 50%;
 	height: 50%;
@@ -36,21 +37,29 @@
 	font-size: 13px ;
 	font-family: 'Poppins', sans-serif;
 }
-.btn__placeYourOrder {
+.btn__placeYourOrder, .btn__checkout {
 	align-self: center !important;
 	text-align: center !important;
-	margin-left: 15% !important;
-	margin-top: 15px !important;
 	color: #757575 !important;
 	background-color: white !important;
 	border-radius: 25px !important;
 	border: 1px solid #fb8c00 !important;
 	text-transform: lowercase !important;
+	font-family: 'Poppins', sans-serif !important;
 }
-.btn__placeYourOrder:hover {
+.btn__placeYourOrder:hover, .btn__checkout:hover {
 	background-color: #fb8c00 !important ;
 	color: white !important;
 	border: none !important;
+}
+.btn__placeYourOrder {
+
+	margin-left: 15% !important;
+	margin-top: 15px !important;
+}
+.btn__checkout {
+	width: 120px;
+	height: 40px;
 }
 .MuiButtonBase-root .MuiButton-root .MuiButton-contained .btn__placeYourOrder {
 	border: 25px !important;

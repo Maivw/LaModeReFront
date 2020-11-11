@@ -179,6 +179,8 @@ function AllProducts(props) {
 																			color: "#363A40",
 																			fontSize: "13px",
 																			marginLeft: 10,
+																			fontFamily: "'Poppins', sans-serif ",
+																			fontWeight: 300,
 																		}}
 																	>
 																		{product.productName}
@@ -192,6 +194,8 @@ function AllProducts(props) {
 																		color: "#363A40",
 																		textDecoration: "line-through",
 																		fontSize: "13px",
+																		fontFamily: "'Poppins', sans-serif ",
+																		fontWeight: 300,
 																	}}
 																>
 																	$
@@ -208,6 +212,8 @@ function AllProducts(props) {
 																		color: "#363A40",
 																		fontSize: "13px",
 																		marginLeft: 10,
+																		fontFamily: "'Poppins', sans-serif ",
+																		fontWeight: 300,
 																	}}
 																>
 																	{product.productName}
@@ -231,7 +237,7 @@ function AllProducts(props) {
 															<StarIcon
 																style={{
 																	color: fav ? "#fb8c00" : "#bdbdbd",
-																	marginLeft: -20,
+																	marginLeft: -5,
 																}}
 															/>
 														</IconButton>

@@ -28,8 +28,6 @@ export default function FavoriteProducts(props) {
 		dispatch(addToCart(p, count));
 	};
 	const getProductDetail = (p, id) => () => {
-		console.log("PPP", p);
-		console.log("aaaaaa");
 		dispatch(getOneProduct(p, p.id));
 	};
 
@@ -94,10 +92,25 @@ export default function FavoriteProducts(props) {
 									<span>$</span>
 									{p.price}
 								</p>
-								<p>Code: {p.productCode}</p>
+								<p>
+									Code:
+									<span className="wishlist__item--right productCode">
+										{p.productCode}
+									</span>
+								</p>
 
-								<p>Color: {p.color}</p>
-								<p>Description: {p.description}</p>
+								<p>
+									Color:
+									<span className="wishlist__item--right productColor">
+										{p.color}
+									</span>
+								</p>
+								<p>
+									Description:
+									<span className="wishlist__item--right productDescription">
+										{p.description}
+									</span>
+								</p>
 							</div>
 						</ul>
 					))}

@@ -1,10 +1,8 @@
 .wishlist__box {
-
-  border: 1px solid #e0e0e0;
   margin-top: 20;
   background-color: white;
-  border-radius: 25px;
   z-index: 100;
+  padding:10px 0;
 
 }
 .wishlist__items {
@@ -54,4 +52,17 @@
 .wishlist__item--right .productPrice {
 	font-size: 1rem;
 	color: #363A40;
+}
+
+.wishlist__item--right .productDescription{
+  font-weight: 300;
+  margin-left: 5px;
+}
+.wishlist__item--right .productColor{
+  font-weight: 300;
+  margin-left: 5px;
+}
+.wishlist__item--right .productCode {
+  font-weight: 300;
+  margin-left: 5px;
 }

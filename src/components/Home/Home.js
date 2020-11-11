@@ -6,7 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import Collection from "./CollectionFall";
 import CollectionWinter from "./CollectionWinter";
 import CollectionSpring from "./CollectionSpring";
-import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
 import Footer from "./Footer";
 import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
@@ -28,9 +28,10 @@ export default function Home(props) {
 		>
 			<Navbar />
 			<Link to="/products">
-				<button className="shopNow_button">
-					<strong>SHOP NOW</strong>
-				</button>
+				<Button className="btn__shopnow">
+					<span style={{ textTransform: "uppercase" }}>S</span>
+					hop now
+				</Button>
 			</Link>
 			<div className="home__box-carousel">
 				<Carousel />

@@ -4,7 +4,7 @@ import { getOneProduct } from "../../reducers/productManagement";
 import { addToCart } from "../../reducers/cartManagement";
 import ReactImageMagnify from "react-image-magnify";
 import "../../index.css";
-import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 import Navbar from "../Navbar/Navbar";
@@ -111,7 +111,10 @@ export default function SingleProduct(props) {
 							</span>
 						</div>
 						<div className="button__addToCart">
-							<button onClick={handleAddToCart}>Add to cart</button>
+							<Button className="btn__addToCart" onClick={handleAddToCart}>
+								<span style={{ textTransform: "uppercase" }}>A</span>
+								dd to cart
+							</Button>
 						</div>
 					</div>
 				</div>

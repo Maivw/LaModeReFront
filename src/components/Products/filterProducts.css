@@ -38,8 +38,9 @@ font-weight: 500;
 	border-radius: 5px;
 	border: 1px solid #bdbdbd;
 	padding: 0 10px;
-	color: #363A40;
+	color: #757575;
 	cursor: pointer;
+	font-family: 'Poppins', sans-serif 
 }
 
 /* @media only screen and (max-width: 500px) {
