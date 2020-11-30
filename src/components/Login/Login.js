@@ -40,13 +40,13 @@ export default function Login(props) {
 	}
 	return (
 		<div className="login">
-			<div class="login__brand">
-				<span class="login__brand-text">LaMode</span>
+			<div className="login__brand">
+				<span className="login__brand-text">LaMode</span>
 			</div>
 			<h1 className="login__heading">Sign In</h1>
-			<form className="login__form" autocomplete="off" onSubmit={handleSubmit}>
+			<form className="login__form" autoComplete="off" onSubmit={handleSubmit}>
 				<div className="form__group">
-					<label forHTML="email" class="form__label">
+					<label forhtml="email" className="form__label">
 						Email
 					</label>
 					<input
@@ -59,7 +59,7 @@ export default function Login(props) {
 					/>
 				</div>
 				<div className="form__group">
-					<label forHTML="password" class="form__label">
+					<label forhtml="password" className="form__label">
 						Password
 					</label>
 					<input
