@@ -15,50 +15,13 @@ import Navbar from "../Navbar/Navbar";
 import Paginations from "./Pagination";
 import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import "./AllProducts.css";
+
 const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
 	},
-	left: {
-		display: "flex",
-		flexDirection: "column",
-		width: "fit-content",
-		overflow: "hidden",
-		backgroundColor: "white",
-		marginLeft: "5%",
-	},
-	center: {
-		width: "fit-content",
-		overflow: "hidden",
-		backgroundColor: "white",
-		marginRight: "5%",
-	},
-	right: {
-		backgroundColor: "white",
-	},
 	gridList: {
 		height: "auto",
-	},
-	icon: {
-		color: "rgba(255, 255, 255, 0.54)",
-		marginRight: 15,
-	},
-	productImgs: {
-		width: "100%",
-		objectFit: "cover",
-	},
-
-	link: {
-		textDecoration: "none",
-		color: "#07ad90",
-		fontSize: "14px",
-	},
-	gridListTileBar: {
-		width: "100%",
-		backgroundColor: "white",
-		marginBottom: 0,
-		zIndex: 1,
 	},
 }));
 
@@ -118,20 +81,21 @@ function AllProducts(props) {
 	return (
 		<div>
 			<Navbar />
-			<Grid container spacing={3}>
-				<Grid item xs className={classes.left}>
-					<p className="filter__text">Filter Products</p>
-					<div className="pagination__box">
-						<p>
-							Page: <span sytle={{ marginLeft: "10px" }}> {currentPage}</span>
-						</p>
+			<Grid container spacing={3} className="allproducts__box">
+				<Grid item xs={3} className="allproducts__box-left">
+					<p className="allproducts__box-left-text">Filter Products</p>
+					<div className="allproducts__box-left-pagination">
+						<div className="allproducts__box-left-page">
+							Page: <span> {currentPage}</span>
+						</div>
 						<Paginations
 							itemsPerPage={itemsPerPage}
 							totalItems={products.length}
 							paginate={paginate}
+							className="allproducts__box-left-paginate"
 						/>
 					</div>
-					<div className="filter__box">
+					<div className="allproducts__box-left-filter">
 						<FilterProducts
 							filterValue={onFilter}
 							filterPrice={onFilterByPrice}
@@ -139,7 +103,7 @@ function AllProducts(props) {
 						/>
 					</div>
 				</Grid>
-				<Grid item xs={8} className={classes.center}>
+				<Grid item xs={9} className="allproducts__box-right">
 					<div className={classes.root}>
 						{currentItems && (
 							<GridList
@@ -151,7 +115,7 @@ function AllProducts(props) {
 									const fav = favProducts.find((f) => f.id === product.id);
 									return (
 										<GridListTile
-											className={classes.gridListTile}
+											className="allproducts__box-product"
 											key={product.id}
 											cols={product.cols || 1}
 										>
@@ -160,95 +124,59 @@ function AllProducts(props) {
 												to={`/products/${product.id}`}
 											>
 												<img
-													className={classes.productImgs}
+													className="allproducts__box-product-image"
 													src={product.photo}
 													alt={product.photo}
 												/>
 											</Link>
 
 											<GridListTileBar
-												className={classes.gridListTileBar}
+												className="allproducts__box-product-bottom"
 												title={
-													<strong>
+													<div className="allproducts__box-product-detail">
 														{product.promotion <= 0 ? (
 															<>
-																<span style={{ color: "#363A40" }}>
+																<div className="allproducts__box-product-price">
 																	${product.price}
-																	<span
-																		style={{
-																			color: "#363A40",
-																			fontSize: "13px",
-																			marginLeft: 10,
-																			fontFamily: "'Poppins', sans-serif ",
-																			fontWeight: 300,
-																		}}
-																	>
-																		{product.productName}
-																	</span>
-																</span>
+																</div>
+																<div className="allproducts__box-product-name">
+																	{product.productName}
+																</div>
 															</>
 														) : (
-															<strong>
-																<span
-																	style={{
-																		color: "#363A40",
-																		textDecoration: "line-through",
-																		fontSize: "13px",
-																		fontFamily: "'Poppins', sans-serif ",
-																		fontWeight: 300,
-																	}}
-																>
-																	$
-																	{product.price +
-																		product.price * product.promotion * 0.01}
-																</span>
-																<span
-																	style={{ color: "#fb8c00", marginLeft: 10 }}
-																>
+															<>
+																<div className="allproducts__box-product-price">
 																	${product.price}
-																</span>
-																<span
-																	style={{
-																		color: "#363A40",
-																		fontSize: "13px",
-																		marginLeft: 10,
-																		fontFamily: "'Poppins', sans-serif ",
-																		fontWeight: 300,
-																	}}
-																>
+																	<span className="allproducts__box-product-pricesale">
+																		$
+																		{product.price +
+																			product.price * product.promotion * 0.01}
+																	</span>
+																</div>
+																<div className="allproducts__box-product-name">
 																	{product.productName}
-																</span>
-															</strong>
+																</div>
+															</>
 														)}
-													</strong>
+													</div>
 												}
 												actionIcon={
-													<div
-														style={{
-															display: "flex",
-															flexDirection: "row",
-														}}
-													>
+													<div className="allproducts__box-product-icons">
 														<IconButton
 															aria-label={`star `}
-															className={classes.icon}
 															onClick={handleLike(product)}
 														>
 															<StarIcon
+																className="allproducts__box-product-icons-star"
 																style={{
-																	color: fav ? "#fb8c00" : "#bdbdbd",
-																	marginLeft: -5,
+																	color: fav ? "#fb8c00" : "rgb(155, 154, 154)",
 																}}
 															/>
 														</IconButton>
 														<IconButton>
 															<ShoppingBasketIcon
-																style={{
-																	color: "#363A40",
-																	cursor: "pointer",
-																	marginRight: 5,
-																}}
 																onClick={insertItemIntoCart(product, count)}
+																className="allproducts__box-product-icons-shoppingbag"
 															/>
 														</IconButton>
 													</div>

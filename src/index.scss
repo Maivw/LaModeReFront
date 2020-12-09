@@ -24,6 +24,7 @@ $bgc-1: #757575;
 $bgc-2: #e0e0e0e0;
 $icon-color-1: rgb(155, 154, 154);
 $icone-color-2: rgb(189, 189, 189);
+$boxShadow : 0  0 10px 0 #757575;
 
 @mixin maxWidth ($value) {
 	@media screen and (max-width: $value) {
@@ -332,11 +333,128 @@ box-sizing: border-box;
   font-size: 1rem;
 }
 
-
 .footer__box-icons-github, .footer__box-icons-linkedIn{
   color: #363A40;
 	align-self: center;
 	margin-right: 1rem;
+}
+
+//All Products
+.allproducts__box {
+	border: 2px solid red;
+	border-radius: 2rem;
+	width: 90% !important;
+	margin: 2rem auto !important;
+	&-left {
+		height: auto;
+		width: 100%;
+		border-radius:  2rem 0 0 2rem;
+		background-color: white;
+		&-text {
+			color: $text-color-2;
+			font-size: 1.5rem;
+			padding: 0.5rem;
+		}
+		&-page {
+			padding: 1rem;
+			font-size: 1rem;
+		}
+		&-filter {
+			&-text {
+				color: $text-color-2;
+				font-size: 1rem;
+				padding: 0.5rem;
+			}
+			&-sizes {
+				@include flexbox1(center,center ,row, wrap );
+				
+			}
+			&-size {
+				cursor: pointer;
+				font-size: 1rem;
+				margin: 0.5rem;
+				&:hover {
+					color: $text-color-2 !important;
+				}
+			}
+			&-input {
+				padding: 0.5rem;
+				font-family: "Poppins", sans-serif !important;
+				color: $text-color-1 !important;
+				border: 1px solid $border-color !important;
+				border-radius: 1rem !important;
+				margin-left: 2rem !important;
+			}
+
+		}
+		
+	}
+	&-right {
+		border-radius:  0 2rem  2rem 0;
+		background-color: white;
+	}
+	&-product{
+		margin-bottom: 1rem;
+		border-radius: 1rem;
+		height: 30rem !important;
+		position: relative;
+		&-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			border-radius: 1rem;
+			box-shadow: $boxShadow;
+	
+		}
+		&-bottom {
+			box-shadow: $boxShadow;
+			position: sticky;
+			border: 1px solid $border-color;
+			background-color: white !important;
+			border-radius: 0 0  1rem 1rem;
+		}
+		&-name {
+			color: $text-color-2;
+			font-weight: 500;
+		}
+		&-price {
+			color: $text-color-2;
+			font-weight: 500;
+			font-size: 1rem;
+			
+		}
+		&-pricesale {
+			display: inline-block;
+			color: $text-color-1;
+			font-size: 0.7rem;
+			text-decoration: line-through;
+			margin-left: 2rem;
+		}
+		&-detail {
+			color: $text-color-1;
+			font-size: 0.7rem;
+			margin-right: 1rem;
+		}
+		&-icons {
+			@include flexbox1(center, space-around, row );
+		}
+	}
+}
+.filter__text {
+	color: #363A40;
+	font-size: 1.5rem;
+	font-weight: 200;
+	
+}
+.filter__box {
+	align-self: center;
+	width: 90%;
+}
+.pagination__box p {
+	color: #363A40;
+	margin-left: 10px;
+	font-weight: 300;
 }
 
 //responsive
@@ -417,6 +535,32 @@ box-sizing: border-box;
 		margin: 0.5rem auto;
 		
 	}
+	//all products
+	.allproducts__box {
+		@include flexbox1(center, center, column);
+		&-product{
+			height: 50% !important;
+		}
+		&-left {
+			&-text {
+				font-size: 1.2rem;
+			}
+		}
+	
+	}
+	
+	.MuiGrid-root {
+		&.allproducts__box-left {
+			max-width: 90%;
+			border-radius: 1rem 1rem 0 0;
+		}
+		&.allproducts__box-right {
+			max-width: 90%;
+			border-radius: 0 0 1rem 1rem;
+		}
+	
+	}
+	
 }
 @include minMax(540px, 414px) {
 	//Nabar
@@ -497,6 +641,13 @@ box-sizing: border-box;
 		margin: 1rem auto;
 		
 	}
+	//all products
+	.allproducts__box {
+		@include flexbox1(center, center, column);
+		&-product{
+			height: 70% !important;
+		}
+	}
 }
 @include minMax(1024px, 541px) {
 	.btn__shopnow {
@@ -534,13 +685,19 @@ box-sizing: border-box;
 		height: 35rem;
 		margin: 2rem auto;	
 	}
+	//all products
+	.allproducts__box {
+		&-product{
+			height: 80% !important;
+		}
+	}
 }
 @include minMax(1440px, 1025px) {
 	.btn__shopnow {
 		left: 50% !important;
 		top: 50% !important;
 		transform: translate(-50%, -50%) !important;
-		border: 2px solid red;
+	
 	}
 	.slick-next {
 		&:before {

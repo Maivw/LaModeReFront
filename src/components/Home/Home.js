@@ -36,7 +36,7 @@ export default function Home(props) {
 				/>
 			</div>
 			<div className="home__center">
-				<p className="home__center-colectionText">Coming soon ...</p>
+				<p className="home__center-colectionText">Coming soon</p>
 				<div className="home__box-colections">
 					<Collection />
 					<CollectionWinter />

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { filterProducts } from "../../reducers/productManagement";
-import "./filterProducts.css";
 export default function FilterProducts(props) {
 	const [sortBy] = useState();
 
@@ -23,31 +22,30 @@ export default function FilterProducts(props) {
 		props.filterSortAndFilter(filterSort);
 	}, [filterSort]);
 	return (
-		<div className="filter__bar">
-			<p>Size</p>
-			<div className="filter__sizes">
+		<div className="allproducts__box-left-filter-bar">
+			<p className="allproducts__box-left-filter-text">Size</p>
+			<div className="allproducts__box-left-filter-sizes">
 				{size.map((e, i) => (
 					<div
 						onClick={filterProduct(e)}
 						key={i}
 						style={{
-							backgroundColor: e === filterSort.filterBy ? "#fb8c00" : "white",
-							border:
-								e === filterSort.filterBy
-									? " 1px solid white"
-									: "1px solid #bdbdbd",
-							color: e === filterSort.filterBy ? "white" : "#363A40",
+							color: e === filterSort.filterBy ? "#fb8c00" : "#757575",
 						}}
-						className="filter__sizes--item "
+						className="allproducts__box-left-filter-size"
 					>
-						<span>{e}</span>
+						{e}
 					</div>
 				))}
 			</div>
-			<p>Price</p>
-			<div className="filByPrice">
+			<p className="allproducts__box-left-filter-text">Price</p>
+			<div className="allproducts__box-left-filter-price">
 				<label htmlFor="price"></label>
-				<select id="filter__price" value={sortBy} onChange={handleChangeSort}>
+				<select
+					className="allproducts__box-left-filter-input"
+					value={sortBy}
+					onChange={handleChangeSort}
+				>
 					<option value="lowest">Lowest to Highest</option>
 					<option value="highest">Highest to Lowest</option>
 				</select>

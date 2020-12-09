@@ -328,6 +328,143 @@ body {
   margin-right: 1rem;
 }
 
+.allproducts__box {
+  border: 2px solid red;
+  border-radius: 2rem;
+  width: 90% !important;
+  margin: 2rem auto !important;
+}
+
+.allproducts__box-left {
+  height: auto;
+  width: 100%;
+  border-radius: 2rem 0 0 2rem;
+  background-color: white;
+}
+
+.allproducts__box-left-text {
+  color: #fb8c00;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.allproducts__box-left-page {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.allproducts__box-left-filter-text {
+  color: #fb8c00;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.allproducts__box-left-filter-sizes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.allproducts__box-left-filter-size {
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+
+.allproducts__box-left-filter-size:hover {
+  color: #fb8c00 !important;
+}
+
+.allproducts__box-left-filter-input {
+  padding: 0.5rem;
+  font-family: "Poppins", sans-serif !important;
+  color: #757575 !important;
+  border: 1px solid #bdbdbd !important;
+  border-radius: 1rem !important;
+  margin-left: 2rem !important;
+}
+
+.allproducts__box-right {
+  border-radius: 0 2rem  2rem 0;
+  background-color: white;
+}
+
+.allproducts__box-product {
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  height: 30rem !important;
+  position: relative;
+}
+
+.allproducts__box-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 #757575;
+}
+
+.allproducts__box-product-bottom {
+  box-shadow: 0 0 10px 0 #757575;
+  position: sticky;
+  border: 1px solid #bdbdbd;
+  background-color: white !important;
+  border-radius: 0 0  1rem 1rem;
+}
+
+.allproducts__box-product-name {
+  color: #fb8c00;
+  font-weight: 500;
+}
+
+.allproducts__box-product-price {
+  color: #fb8c00;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.allproducts__box-product-pricesale {
+  display: inline-block;
+  color: #757575;
+  font-size: 0.7rem;
+  text-decoration: line-through;
+  margin-left: 2rem;
+}
+
+.allproducts__box-product-detail {
+  color: #757575;
+  font-size: 0.7rem;
+  margin-right: 1rem;
+}
+
+.allproducts__box-product-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+.filter__text {
+  color: #363A40;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.filter__box {
+  align-self: center;
+  width: 90%;
+}
+
+.pagination__box p {
+  color: #363A40;
+  margin-left: 10px;
+  font-weight: 300;
+}
+
 @media screen and (max-width: 413px) and (min-width: 280px) {
   .navbar__logo-image {
     width: 4rem;
@@ -393,6 +530,27 @@ body {
     width: 10rem;
     height: 15rem;
     margin: 0.5rem auto;
+  }
+  .allproducts__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .allproducts__box-product {
+    height: 50% !important;
+  }
+  .allproducts__box-left-text {
+    font-size: 1.2rem;
+  }
+  .MuiGrid-root.allproducts__box-left {
+    max-width: 90%;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .MuiGrid-root.allproducts__box-right {
+    max-width: 90%;
+    border-radius: 0 0 1rem 1rem;
   }
 }
 
@@ -470,6 +628,16 @@ body {
     height: 25rem;
     margin: 1rem auto;
   }
+  .allproducts__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .allproducts__box-product {
+    height: 70% !important;
+  }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 541px) {
@@ -501,6 +669,9 @@ body {
     height: 35rem;
     margin: 2rem auto;
   }
+  .allproducts__box-product {
+    height: 80% !important;
+  }
 }
 
 @media screen and (max-width: 1440px) and (min-width: 1025px) {
@@ -508,7 +679,6 @@ body {
     left: 50% !important;
     top: 50% !important;
     transform: translate(-50%, -50%) !important;
-    border: 2px solid red;
   }
   .slick-next:before {
     margin-left: -34rem;
