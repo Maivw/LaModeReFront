@@ -20,43 +20,8 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
 	},
-	left: {
-		display: "flex",
-		flexDirection: "column",
-		width: "fit-content",
-		overflow: "hidden",
-		backgroundColor: "#F2F3F5",
-	},
-	center: {
-		width: "fit-content",
-		overflow: "hidden",
-		backgroundColor: "white",
-	},
-	right: {
-		backgroundColor: "#F2F3F5",
-	},
 	gridList: {
 		height: "auto",
-	},
-	icon: {
-		color: "rgba(255, 255, 255, 0.54)",
-		marginRight: 15,
-	},
-	productImgs: {
-		width: "100%",
-		objectFit: "cover",
-	},
-
-	link: {
-		textDecoration: "none",
-		color: "#07ad90",
-		fontSize: "14px",
-	},
-	gridListTileBar: {
-		width: "100%",
-		backgroundColor: "white",
-		marginBottom: 0,
-		zIndex: 1,
 	},
 }));
 
@@ -98,22 +63,18 @@ function ProductBasedOnList(props) {
 	return (
 		<>
 			<Navbar />
-			<Grid container spacing={3}>
-				<Grid item xs={2} className={classes.left}></Grid>
-				<Grid item xs={8} className={classes.center}>
+			<Grid container spacing={3} className="productlist__box">
+				<Grid item xs={2}></Grid>
+				<Grid item xs={8} className="productlist">
 					<div className={classes.root}>
 						{products && (
-							<GridList
-								cellHeight={460}
-								className={classes.gridList}
-								cols={getGridListCols()}
-							>
+							<GridList cellHeight={460} cols={getGridListCols()}>
 								{products[0].Products.map((product) => {
-									console.log("AAA", products[0].Products);
+									console.log(products[0].Products);
 									const fav = favProducts.find((f) => f.id === product.id);
 									return (
 										<GridListTile
-											className={classes.gridListTile}
+											className="productlist__wrapper"
 											key={product.id}
 											cols={product.cols || 1}
 										>
@@ -122,94 +83,58 @@ function ProductBasedOnList(props) {
 												to={`/products/${product.id}`}
 											>
 												<img
-													className={classes.productImgs}
+													className="productlist__image"
 													src={product.photo}
 													alt={product.photo}
 												/>
 											</Link>
 											<GridListTileBar
-												className={classes.gridListTileBar}
+												className="productlist__bottom"
 												title={
-													<strong>
+													<div className="productlist__detail">
 														{product.promotion <= 0 ? (
 															<>
-																<span style={{ color: "#363A40" }}>
+																<div className="productlist__price">
 																	${product.price}
-																	<span
-																		style={{
-																			color: "#363A40",
-																			fontSize: "13px",
-																			marginLeft: 10,
-																			fontFamily: "'Poppins', sans-serif ",
-																			fontWeight: 300,
-																		}}
-																	>
-																		{product.productName}
-																	</span>
-																</span>
+																</div>
+																<div className="productlist__name">
+																	{product.productName}
+																</div>
 															</>
 														) : (
-															<strong>
-																<span
-																	style={{
-																		color: "#363A40",
-																		textDecoration: "line-through",
-																		fontSize: "13px",
-																		fontFamily: "'Poppins', sans-serif ",
-																		fontWeight: 300,
-																	}}
-																>
-																	$
-																	{product.price +
-																		product.price * product.promotion * 0.01}
-																</span>
-																<span
-																	style={{ color: "#fb8c00", marginLeft: 10 }}
-																>
+															<>
+																<div className="productlist__price">
 																	${product.price}
-																</span>
-																<span
-																	style={{
-																		color: "#363A40",
-																		fontSize: "13px",
-																		marginLeft: 10,
-																		fontFamily: "'Poppins', sans-serif ",
-																		fontWeight: 300,
-																	}}
-																>
+																	<span className="productlist__pricesale">
+																		$
+																		{product.price +
+																			product.price * product.promotion * 0.01}
+																	</span>
+																</div>
+																<div className="productlist__name">
 																	{product.productName}
-																</span>
-															</strong>
+																</div>
+															</>
 														)}
-													</strong>
+													</div>
 												}
 												actionIcon={
-													<div
-														style={{
-															display: "flex",
-															flexDirection: "row",
-														}}
-													>
+													<div className="productlist__icons">
 														<IconButton
 															aria-label={`star `}
-															className={classes.icon}
 															onClick={handleLike(product)}
 														>
 															<StarIcon
+																className="productlist__icons-star"
 																style={{
-																	color: fav ? "#fb8c00" : "#bdbdbd",
-																	marginLeft: -5,
+																	color: fav ? "#fb8c00" : "rgb(155, 154, 154)",
 																}}
 															/>
 														</IconButton>
 														<IconButton>
 															<ShoppingBasketIcon
-																style={{
-																	color: "#363A40",
-																	cursor: "pointer",
-																	marginRight: 5,
-																}}
 																onClick={insertItemIntoCart(product, count)}
+																className="productlist__icons-shoppingbag"
 															/>
 														</IconButton>
 													</div>
@@ -222,7 +147,7 @@ function ProductBasedOnList(props) {
 						)}
 					</div>
 				</Grid>
-				<Grid item xs className={classes.right}></Grid>
+				<Grid item xs={2}></Grid>
 			</Grid>
 		</>
 	);
