@@ -329,7 +329,6 @@ body {
 }
 
 .allproducts__box {
-  border: 2px solid red;
   border-radius: 2rem;
   width: 90% !important;
   margin: 2rem auto !important;
@@ -542,7 +541,27 @@ body {
     height: 50% !important;
   }
   .allproducts__box-left-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+  .allproducts__box-left-page {
+    font-size: 0.8rem;
+    margin-left: -0.5rem;
+  }
+  .allproducts__box-left-filter-sizes {
+    justify-content: flex-start;
+    margin-left: 0.5rem;
+  }
+  .allproducts__box-left-filter-size {
+    font-size: 0.5rem !important;
+  }
+  .allproducts__box-left-filter-text {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  .allproducts__box-left-filter-input {
+    border: 0.5px solid #bdbdbd !important;
+    font-size: 0.5rem !important;
+    margin-left: 0.5rem !important;
   }
   .MuiGrid-root.allproducts__box-left {
     max-width: 90%;
@@ -638,6 +657,43 @@ body {
   .allproducts__box-product {
     height: 70% !important;
   }
+  .allproducts__box-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .allproducts__box-left-text {
+    font-size: 1.2rem;
+  }
+  .allproducts__box-left-page {
+    font-size: 0.9rem;
+    margin-left: -2rem;
+  }
+  .allproducts__box-left-filter-sizes {
+    justify-content: flex-start;
+    margin-left: 1.5rem;
+  }
+  .allproducts__box-left-filter-size {
+    font-size: 0.7rem !important;
+  }
+  .allproducts__box-left-filter-text {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  .allproducts__box-left-filter-input {
+    border: 0.5px solid #bdbdbd !important;
+    font-size: 0.5rem !important;
+  }
+  .MuiGrid-root.allproducts__box-left {
+    max-width: 90%;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .MuiGrid-root.allproducts__box-right {
+    max-width: 90%;
+    border-radius: 0 0 1rem 1rem;
+  }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 541px) {
@@ -669,8 +725,52 @@ body {
     height: 35rem;
     margin: 2rem auto;
   }
+  .allproducts__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
   .allproducts__box-product {
     height: 80% !important;
+  }
+  .allproducts__box-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .allproducts__box-left-text {
+    font-size: 1.5rem;
+  }
+  .allproducts__box-left-page {
+    font-size: 1rem;
+    margin-left: -2.5rem;
+  }
+  .allproducts__box-left-filter-sizes {
+    justify-content: flex-start;
+    margin-left: 1.5rem;
+  }
+  .allproducts__box-left-filter-size {
+    font-size: 0.8rem !important;
+  }
+  .allproducts__box-left-filter-text {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .allproducts__box-left-filter-input {
+    border: 1px solid #bdbdbd !important;
+    font-size: 0.7rem !important;
+  }
+  .MuiGrid-root.allproducts__box-left {
+    max-width: 90%;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .MuiGrid-root.allproducts__box-right {
+    max-width: 90%;
+    border-radius: 0 0 1rem 1rem;
   }
 }
 

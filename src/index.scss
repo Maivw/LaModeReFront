@@ -341,7 +341,6 @@ box-sizing: border-box;
 
 //All Products
 .allproducts__box {
-	border: 2px solid red;
 	border-radius: 2rem;
 	width: 90% !important;
 	margin: 2rem auto !important;
@@ -543,16 +542,40 @@ box-sizing: border-box;
 		}
 		&-left {
 			&-text {
-				font-size: 1.2rem;
+				font-size: 1rem;
+			
+			}
+			&-page {
+				font-size: 0.8rem;
+				margin-left: -0.5rem;
 			}
 		}
+		
 	
 	}
-	
+	.allproducts__box-left-filter {
+		&-sizes {
+			justify-content: flex-start;
+			margin-left: 0.5rem;
+		}
+		&-size {
+			font-size: 0.5rem !important;
+		}
+		&-text {
+			font-size: 0.8rem;
+			padding: 0.5rem;
+		}
+		&-input {
+			border: 0.5px solid $border-color!important;
+			font-size: 0.5rem !important;
+			margin-left: 0.5rem !important;
+		}
+	}
 	.MuiGrid-root {
 		&.allproducts__box-left {
 			max-width: 90%;
 			border-radius: 1rem 1rem 0 0;
+			
 		}
 		&.allproducts__box-right {
 			max-width: 90%;
@@ -646,8 +669,52 @@ box-sizing: border-box;
 		@include flexbox1(center, center, column);
 		&-product{
 			height: 70% !important;
+		
+		}
+		&-left {
+			@include flexbox1(center, center, column);
+			&-text {
+				font-size: 1.2rem;
+			
+			}
+			&-page {
+				font-size: 0.9rem;
+				margin-left: -2rem;
+			}
+		}
+		
+	
+	}
+	.allproducts__box-left-filter {
+		&-sizes {
+			justify-content: flex-start;
+			margin-left: 1.5rem;
+		}
+		&-size {
+			font-size: 0.7rem !important;
+		}
+		&-text {
+			font-size: 0.9rem;
+			padding: 0.5rem;
+		}
+		&-input {
+			border: 0.5px solid $border-color!important;
+			font-size: 0.5rem !important;
 		}
 	}
+	.MuiGrid-root {
+		&.allproducts__box-left {
+			max-width: 90%;
+			border-radius: 1rem 1rem 0 0;
+			
+		}
+		&.allproducts__box-right {
+			max-width: 90%;
+			border-radius: 0 0 1rem 1rem;
+		}
+	
+	}
+	
 }
 @include minMax(1024px, 541px) {
 	.btn__shopnow {
@@ -685,11 +752,56 @@ box-sizing: border-box;
 		height: 35rem;
 		margin: 2rem auto;	
 	}
+	
 	//all products
 	.allproducts__box {
+		@include flexbox1(center, center, column);
 		&-product{
 			height: 80% !important;
+		
 		}
+		&-left {
+			@include flexbox1(center, center, column);
+			&-text {
+				font-size: 1.5rem;
+			
+			}
+			&-page {
+				font-size: 1rem;
+				margin-left: -2.5rem;
+			}
+		}
+		
+	
+	}
+	.allproducts__box-left-filter {
+		&-sizes {
+			justify-content: flex-start;
+			margin-left: 1.5rem;
+		}
+		&-size {
+			font-size: 0.8rem !important;
+		}
+		&-text {
+			font-size: 1rem;
+			padding: 0.5rem;
+		}
+		&-input {
+			border: 1px solid $border-color!important;
+			font-size: 0.7rem !important;
+		}
+	}
+	.MuiGrid-root {
+		&.allproducts__box-left {
+			max-width: 90%;
+			border-radius: 1rem 1rem 0 0;
+			
+		}
+		&.allproducts__box-right {
+			max-width: 90%;
+			border-radius: 0 0 1rem 1rem;
+		}
+	
 	}
 }
 @include minMax(1440px, 1025px) {
