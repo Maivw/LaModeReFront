@@ -1,5 +1,4 @@
 import React from "react";
-import "./Home.css";
 import Carousel from "./Carousel";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
@@ -18,14 +17,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Home(props) {
 	const classes = useStyles();
 	return (
-		<div
-			style={{
-				backgroundColor: "#eeeeee",
-				margin: 0,
-				padding: 0,
-				boxSizing: "border-box",
-			}}
-		>
+		<div className="home">
 			<Navbar />
 			<Link to="/products">
 				<Button className="btn__shopnow">
@@ -43,16 +35,16 @@ export default function Home(props) {
 					src="https://res.cloudinary.com/maivw/image/upload/v1604714491/pexels-konstantin-mishchenko-1926769_b99lis.jpg"
 				/>
 			</div>
-			<div className="center">
-				<p className="home__box-colectionText">Coming soon ...</p>
+			<div className="home__center">
+				<p className="home__center-colectionText">Coming soon ...</p>
 				<div className="home__box-colections">
 					<Collection />
 					<CollectionWinter />
 					<CollectionSpring />
 				</div>
-				<div className="home__box--footer">
-					<Footer />
-				</div>
+			</div>
+			<div className="home__footer">
+				<Footer />
 			</div>
 		</div>
 	);

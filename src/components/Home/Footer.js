@@ -2,7 +2,6 @@ import React from "react";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import CopyrightIcon from "@material-ui/icons/Copyright";
-import "./footer.css";
 
 function Footer() {
 	return (

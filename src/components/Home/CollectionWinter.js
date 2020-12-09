@@ -1,5 +1,4 @@
 import React from "react";
-import "./Collection.css";
 
 function CollectionWinter() {
 	return (

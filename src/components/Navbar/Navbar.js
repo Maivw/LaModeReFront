@@ -12,7 +12,6 @@ import { Link } from "react-router-dom";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Badge from "@material-ui/core/Badge";
-import "./navbar.css";
 import Options from "./Options";
 
 const useStyles = makeStyles((theme) => ({
@@ -54,29 +53,35 @@ export default function Navbar(props) {
 
 	return (
 		<div>
-			<div className={classes.root} id="navbar">
+			<div className={classes.root} className="navbar">
 				<Grid container direction="row" justify="center" alignItems="center">
 					<Grid item xs={2} sm={2} md={2} lg={2} xl={2}>
 						<div className="navbar__logo">
 							<a href="https://maivw.github.io/" target="_blank">
 								<img
-									className="navbar__logo--image"
+									className="navbar__logo-image"
 									src="https://res.cloudinary.com/maivw/image/upload/v1600572380/Lamode/LamModeLogo_mifxuv.png"
 									alt="LaModeLogo"
 								/>
 							</a>
 						</div>
 					</Grid>
-					<Grid item xs={6} sm={6} md={6} lg={6} xl={6} className="navbar-p2">
-						<div className="brandName">
-							<span
-								className="brandName__text"
-								onClick={(e) => onBackHomePage(e)}
-							>
-								LaMode
-							</span>
+					<Grid
+						item
+						xs={6}
+						sm={6}
+						md={6}
+						lg={6}
+						xl={6}
+						className="navbar__middle"
+					>
+						<div
+							className="navbar__middle-brandName"
+							onClick={(e) => onBackHomePage(e)}
+						>
+							LaMode
 						</div>
-						<div className="navbar__categories">
+						<div className="navbar__middle-categories">
 							<div>
 								<ModalWomenProduct />
 							</div>
@@ -86,30 +91,45 @@ export default function Navbar(props) {
 							<div>
 								<ModalGirlsProduct />
 							</div>
-							<div>
-								<span
-									id="navbar__allproducts"
-									onClick={(e) => onShowProducts(e)}
-								>
-									All Products
-								</span>
+							<div
+								className="navbar__middle-allproducts"
+								onClick={(e) => onShowProducts(e)}
+							>
+								All Products
 							</div>
 						</div>
 					</Grid>
-					<Grid item xs={2} sm={2} md={2} lg={2} xl={2} className="navbar-p3">
-						<div className="navbar__icons">
-							<Link to="/favorite">
-								<Badge color="secondary" variant="dot">
-									<FavoriteIcon className="navbar__icons--favorite " />
-								</Badge>
-							</Link>
-							<Link to="/cart">
-								<StyledBadge badgeContent={products.length} color="secondary">
-									<LocalMallIcon className="navbar__icons--bag" />
-								</StyledBadge>
-							</Link>
-							<AccountCircleIcon onClick={handleClick} />
-							<Options anchorEl={anchorEl} handleClose={handleClose} />
+					<Grid
+						item
+						xs={2}
+						sm={2}
+						md={2}
+						lg={2}
+						xl={2}
+						className="navbar__right"
+					>
+						<div className="navbar__right-icons">
+							<div>
+								<Link to="/favorite">
+									<Badge color="secondary" variant="dot">
+										<FavoriteIcon className="navbar__right-icon" />
+									</Badge>
+								</Link>
+							</div>
+							<div>
+								<Link to="/cart">
+									<StyledBadge badgeContent={products.length} color="secondary">
+										<LocalMallIcon className="navbar__right-icon" />
+									</StyledBadge>
+								</Link>
+							</div>
+							<div className="navbar__right-icon">
+								<AccountCircleIcon
+									onClick={handleClick}
+									className="navbar__right-icon"
+								/>
+								<Options anchorEl={anchorEl} handleClose={handleClose} />
+							</div>
 						</div>
 					</Grid>
 				</Grid>

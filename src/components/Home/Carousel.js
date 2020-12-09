@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
 import { Link, useHistory } from "react-router-dom";
-import "./Carousel.css";
 
 export default function Carousel() {
 	const history = useHistory();

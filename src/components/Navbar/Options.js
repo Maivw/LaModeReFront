@@ -5,8 +5,9 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import PersonAddIcon from "@material-ui/icons/PersonAdd";
+import FaceIcon from "@material-ui/icons/Face";
 import { logout } from "../../reducers/authentication";
-import "./navbar.css";
+
 function Options(props) {
 	const { anchorEl, handleClose } = props;
 	const dispatch = useDispatch();
@@ -25,7 +26,7 @@ function Options(props) {
 	};
 
 	return (
-		<div>
+		<div className="navbar__menu">
 			<Menu
 				id="simple-menu"
 				anchorEl={anchorEl}
@@ -33,22 +34,34 @@ function Options(props) {
 				open={Boolean(anchorEl)}
 				onClose={handleClose}
 			>
-				<MenuItem onClick={onLogout} style={{ fontSize: 12, color: "#424242" }}>
-					<ExitToAppIcon />
-					Log out
+				<MenuItem onClick={onLogout} className="navbar__menu-item">
+					<ExitToAppIcon
+						style={{ color: "rgb(155, 154, 154)", marginRight: "1rem" }}
+					/>
+					<span style={{ fontSize: "0.8rem", color: "#757575" }}>Log out</span>
 				</MenuItem>
-				<MenuItem onClick={onLogin} style={{ fontSize: 12, color: "#424242" }}>
-					<PersonAddIcon />
-					<span>Sign in/up</span>
+				<MenuItem onClick={onLogin} className="navbar__menu-item">
+					<PersonAddIcon
+						style={{ color: "rgb(155, 154, 154)", marginRight: "1rem" }}
+					/>
+					<span style={{ fontSize: "0.8rem", color: "#757575" }}>
+						Sign in/up
+					</span>
 				</MenuItem>
 				<MenuItem onClick={handleClose}>
+					<FaceIcon
+						style={{ color: "rgb(155, 154, 154)", marginRight: "1rem" }}
+					/>
 					<a
-						style={{ fontSize: 12, color: "#424242", textDecoration: "none" }}
+						style={{
+							textDecoration: "none",
+						}}
+						className="navbar__menu-item"
 						className="navbar__about"
 						href="https://github.com/Maivw/LaMode-front2"
 						target="_blank"
 					>
-						About
+						<span style={{ fontSize: "0.8rem", color: "#757575" }}>About</span>
 					</a>
 				</MenuItem>
 			</Menu>
