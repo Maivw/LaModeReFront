@@ -8,7 +8,6 @@ import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 import Navbar from "../Navbar/Navbar";
-import "./singleProduct.css";
 
 export default function SingleProduct(props) {
 	const [count, setCount] = useState(1);
