@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../reducers/authentication";
-import "./Login.css";
 import { Link, Redirect } from "react-router-dom";
-import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
+import "../../index.css";
 
 const useStyles = makeStyles((theme) => ({
 	root: {

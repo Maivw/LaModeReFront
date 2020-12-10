@@ -903,6 +903,146 @@ body {
   padding: 1rem;
 }
 
+.signup__page {
+  padding: 6rem 5rem;
+  background-color: white;
+  border-radius: 2rem;
+  width: 100%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  place-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login {
+  padding: 6rem 5rem;
+  background-color: white;
+  border-radius: 2rem;
+  width: 100%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  place-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login__brand {
+  color: #fb8c00;
+  display: block;
+  text-align: center;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.login__brand:before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  left: -120%;
+  background-color: #c6c6c6;
+  transform: translateY(-50%);
+}
+
+.login__brand:after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  right: -120%;
+  background-color: #c6c6c6;
+  transform: translateY(-50%);
+}
+
+.login__heading {
+  color: #363A40;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.singup__heading {
+  color: #363A40;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn__login, .btn__signup {
+  display: block;
+  width: 100%;
+  background-color: #fb8c00;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  border: 0;
+  font-size: 1rem;
+  box-shadow: 0 10px 20px -5px rgba(251, 140, 0, 0.9);
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+}
+
+.form__input {
+  display: block;
+  width: 20rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: 0;
+  outline: none;
+  background-color: #F2F3F5;
+  color: #363A40;
+  font-size: 0.7rem;
+  box-shadow: 0 10px 20px -5px rgba(242, 243, 245, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+.form__group {
+  margin-bottom: 2rem;
+}
+
+.form__label {
+  display: inline-block;
+  cursor: pointer;
+  color: #363A40;
+  margin-bottom: 15px;
+  font-size: 0.8rem;
+}
+
+.signup, .signup__already {
+  text-align: center;
+  color: #363A40;
+  font-size: 0.8rem;
+}
+
+.signup__link, .login__link {
+  color: #fb8c00;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
 @media screen and (max-width: 413px) and (min-width: 280px) {
   .navbar__logo-image {
     width: 4rem;
@@ -1210,6 +1350,44 @@ body {
   .btn__placeorder {
     font-size: 0.5rem !important;
   }
+  .signup__page {
+    padding: 2rem 1rem;
+    max-width: 16rem;
+  }
+  .login {
+    padding: 2rem 1rem;
+    max-width: 16rem;
+  }
+  .login__brand {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .login__heading, .singup__heading {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .btn__login, .btn__signup {
+    width: 70%;
+    margin: 1rem auto !important;
+    border: 0;
+    font-size: 0.8rem;
+  }
+  .form__input {
+    width: 12rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  .form__group {
+    margin-bottom: 1rem;
+  }
+  .form__label {
+    font-size: 0.8rem;
+  }
+  .signup, .signup__already {
+    font-size: 0.6rem;
+  }
 }
 
 @media screen and (max-width: 540px) and (min-width: 414px) {
@@ -1473,6 +1651,46 @@ body {
     width: 100%;
     margin: 0 0 0.5rem 0.5rem;
   }
+  .signup__page {
+    padding: 2rem 1rem;
+    max-width: 20rem;
+  }
+  .login {
+    padding: 2rem 1rem;
+    max-width: 20rem;
+  }
+  .login__brand {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .login__heading, .singup__heading {
+    font-weight: 500;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+  .btn__login, .btn__signup {
+    display: block;
+    width: 80%;
+    background-color: #fb8c00;
+    margin: 1rem auto !important;
+    border: 0;
+    font-size: 0.9rem;
+  }
+  .form__input {
+    width: 14rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  .form__group {
+    margin-bottom: 1.2rem;
+  }
+  .form__label {
+    font-size: 0.9rem;
+  }
+  .signup, .signup__already {
+    font-size: 0.7rem;
+  }
 }
 
 @media screen and (max-width: 1023px) and (min-width: 541px) {
@@ -1610,6 +1828,10 @@ body {
     margin-left: 0.5rem;
     font-weight: 400;
     font-size: 0.7rem;
+  }
+  .signup__page, .login {
+    padding: 2rem 1rem;
+    max-width: 30rem;
   }
 }
 

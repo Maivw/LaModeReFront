@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { signup } from "../../reducers/authentication";
-import "./Signup.css";
+import "../../index.css";
 import { Link } from "react-router-dom";
 
 export default function Signup(props) {
@@ -21,13 +21,13 @@ export default function Signup(props) {
 
 	return (
 		<div className="signup__page">
-			<div class="login__brand">
-				<span class="login__brand-text">LaMode</span>
+			<div className="login__brand">
+				<span className="login__brand-text">LaMode</span>
 			</div>
 			<h1 className="singup__heading">Sign Up</h1>
-			<form className="login__form" autocomplete="off">
+			<form className="login__form" autoComplete="off">
 				<div className="form__group">
-					<label forHTML="email" class="form__label">
+					<label forhtml="email" className="form__label">
 						Email
 					</label>
 					<input
@@ -42,7 +42,7 @@ export default function Signup(props) {
 					/>
 				</div>
 				<div className="form__group">
-					<label forHTML="username" class="form__label">
+					<label forhtml="username" className="form__label">
 						User Name
 					</label>
 					<input
@@ -56,54 +56,8 @@ export default function Signup(props) {
 						required
 					/>
 				</div>
-				{/* <div className="form__group">
-					<label forHTML="firstname" class="form__label">
-						First Name
-					</label>
-					<input
-						className="form__input"
-						type="text"
-						placeholder="First Name"
-						value={fieldState.firstName}
-						onChange={update}
-						name="firstName"
-						id="firstName"
-						required
-					/>
-				</div>
 				<div className="form__group">
-					<label forHTML="lastname" class="form__label">
-						Last Name
-					</label>
-					<input
-						className="form__input"
-						type="text"
-						placeholder="Last Name"
-						value={fieldState.lastName}
-						onChange={update}
-						name="lastName"
-						id="lastName"
-						required
-					/>
-				</div>
-				<div className="form__group">
-					<label forHTML="phoneNum" class="form__label">
-						Phone Number
-					</label>
-					<input
-						className="form__input"
-						type="text"
-						placeholder="6093257689"
-						value={fieldState.phoneNum}
-						onChange={update}
-						pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-						name="phoneNum"
-						id="phoneNum"
-						required
-					/>
-				</div> */}
-				<div className="form__group">
-					<label forHTML="password" class="form__label">
+					<label forhtml="password" className="form__label">
 						Password
 					</label>
 					<input
@@ -118,7 +72,7 @@ export default function Signup(props) {
 					/>
 				</div>
 				<div className="form__group">
-					<label forHTML="confirmPassword" class="form__label">
+					<label forhtml="confirmPassword" className="form__label">
 						Confirm Password
 					</label>
 					<input
