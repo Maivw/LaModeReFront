@@ -60,8 +60,8 @@ export default function SingleProduct(props) {
 						</div>
 						<div className="fluid__image-moreImages">
 							<div className="fluid__image-moreImages-item">
-								{product.smallerPhotos.map((photo) => (
-									<img src={photo} alt="photo" />
+								{product.smallerPhotos.map((photo, i) => (
+									<img key={i} src={photo} alt="photo" />
 								))}
 							</div>
 						</div>
