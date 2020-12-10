@@ -264,11 +264,13 @@ box-sizing: border-box;
 	cursor: pointer;
 }
 
-.quantity__bar {
+.quantitybar {
 	margin: 1rem 0 0 1rem;
 	background-color: white!important;
 	text-align: center;
 	border-radius: 1rem;
+	max-width: 8rem;
+	@include flexbox1(center, space-evenly,row )
 	
 	
 }

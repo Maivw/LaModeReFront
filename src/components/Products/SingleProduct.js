@@ -94,7 +94,7 @@ export default function SingleProduct(props) {
 							</span>
 						</p>
 						<p>Quantity:</p>
-						<div className="quantity__bar">
+						<div className="quantitybar">
 							<span>
 								<AddIcon
 									onClick={handleAddQuantity}
