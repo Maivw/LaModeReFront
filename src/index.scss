@@ -196,6 +196,9 @@ box-sizing: border-box;
 	transform: translate(-50%, -50%) !important;
 	@include button();
 }
+.btn__placeorder {
+	@include button();
+}
 .fluid {
 	max-width: 90rem;
 	margin: 2rem auto;
@@ -706,6 +709,87 @@ box-sizing: border-box;
 	}
 }
 
+.cart {
+	&__table {
+		width: 80% !important;
+		margin: 0 auto;
+	}
+	&__text {
+		font-size: 1rem;
+		font-family: 'Poppins', sans-serif !important;
+		color: $text-color-2;
+		cursor: pointer;
+		font-weight: 500;
+		&:hover {
+			color: $text-color-1;
+		}
+	}
+	&__image {
+		border-radius: 0.5rem;
+		width: 5rem;
+		height: auto;
+	}
+	&__quantity {
+		width: 2rem;
+		margin: 0 auto;
+		padding: 1rem 0;
+		font-size: 0.8rem;
+		color: $text-color-1;
+		background-color:#eee;
+		border-radius: 0.5rem;
+	}
+}
+
+.checkout__box {
+	margin: 3rem auto;
+	padding: 2rem;
+	width: 60%;
+	background-color: white;
+	border-radius: 2rem;
+	line-height: 1.7;
+	font-size: 1rem;
+	&--head {
+		@include flexbox1(center,center  );
+		&-text {
+			color: $text-color-2;
+			font-size: 1.5rem;
+			padding: 0.5rem;
+			
+		}
+	}
+	&--body {
+		padding: 0 2rem 2rem 2rem;
+		&-text {
+			@include flexbox1(center,center);
+	
+		}
+		&-content {
+			padding: 2rem;
+			font-size: 0.8rem;
+			&-delivery > span{
+				margin-left: 1rem;
+			}
+			&-quantity, &-tax, &-shipping, &-totalorder {
+			@include flexbox1(center, space-between);
+			}
+			&-totalorder >span {
+				font-size: 1rem;
+				font-weight: 500;
+				color: $text-color-3;
+			}
+		}
+		&--input {
+			border: 1px solid $border-color!important;
+			padding: 0.5rem 1rem;
+			margin-left: 1rem;
+			width: 70%;
+			border-radius: 1rem;
+		}
+	}
+	&--footer {
+		padding: 1rem;
+	}
+}
 
 //Responsive
 @include minMax(413px, 280px) {
@@ -961,6 +1045,61 @@ box-sizing: border-box;
 			}
 		}
 		
+	}
+	.cart {
+		font-size: 0.7rem!important;
+		overflow: hidden !important;
+		&__table {
+			width: 50% !important;
+			margin: 0 auto;
+		}
+		&__image {
+			width: 3rem;
+		}
+		&__quantity {
+			width: 1.5rem;
+			padding: 0.5rem 0;
+			font-size: 0.6rem;
+			
+		}
+	}
+	.checkout__box {
+		margin-top: 1rem;
+		font-size: 0.7rem;
+		width: 80%;
+		&--head {
+			&-text {
+				color: $text-color-2;
+				font-size: 1rem;
+				padding: 0.5rem;
+				
+			}
+		}
+		&--body {
+			padding: 0.5rem;
+			&-content {
+				padding: 1rem;
+				font-size: 0.6rem;
+				&-delivery > span{
+					margin-left: 0.5rem;
+				}
+				&-totalorder >span {
+					font-size: 0.7rem;
+				}
+			}
+			&--input {
+				font-size: 0.5rem!important;
+				margin-left: -0.5rem;
+				width: 90%;
+				border-radius: 1rem;
+			}
+		}
+		&--footer {
+			padding: 0.5rem;
+		}
+	}
+	.btn__placeorder {
+		font-size: 0.5rem!important;
 	}
 }
 @include minMax(540px, 414px) {

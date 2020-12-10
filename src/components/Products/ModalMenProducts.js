@@ -17,7 +17,7 @@ export default function ModalMenProduct(props) {
 	const id = open ? "simple-popover" : undefined;
 
 	return (
-		<div div className="modal">
+		<div className="modal">
 			<div
 				aria-describedby={id}
 				variant="contained"

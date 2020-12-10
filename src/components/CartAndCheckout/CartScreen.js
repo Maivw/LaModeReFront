@@ -17,14 +17,13 @@ import TableRow from "@material-ui/core/TableRow";
 import LocalAtmIcon from "@material-ui/icons/LocalAtm";
 import Button from "@material-ui/core/Button";
 import { Redirect } from "react-router-dom";
-import "./CartScreen.css";
 
 const StyledTableCell = withStyles((theme) => ({
 	head: {
 		backgroundColor: "#f5f5f5",
 		color: "#363A40",
-		borderTopLeftRadius: "25px",
-		borderTopRightRadius: "25px",
+		borderTopLeftRadius: "2rem",
+		borderTopRightRadius: "2rem",
 		zIndex: 100,
 		fontFamily: "Poppins",
 	},
@@ -39,6 +38,7 @@ const StyledTableRow = withStyles((theme) => ({
 			backgroundColor: theme.palette.action.hover,
 		},
 		fontFamily: "Poppins",
+		fontSize: "0.8rem",
 	},
 }))(TableRow);
 
@@ -46,12 +46,7 @@ function createData(name, Quantity, Price, Total) {
 	return { name, Quantity, Price, Total };
 }
 
-const useStyles = makeStyles({
-	table: {
-		minWidth: 400,
-		width: "80%",
-	},
-});
+const useStyles = makeStyles({});
 
 export default function CartScreen(props) {
 	const classes = useStyles();
@@ -73,20 +68,11 @@ export default function CartScreen(props) {
 	return (
 		<div>
 			<Navbar />
-			<TableContainer
-				style={{
-					margin: "1rem auto",
-					display: "flex",
-					justifyContent: "center",
-				}}
-			>
-				<Table className={classes.table} aria-label="customized table">
+			<TableContainer className="cart__box">
+				<Table className="cart__table" aria-label="customized table">
 					<TableHead>
 						<TableRow>
-							<StyledTableCell
-								style={{ width: "25%", borderRadius: "10" }}
-								align="center"
-							>
+							<StyledTableCell style={{ width: "25%" }} align="center">
 								Item
 							</StyledTableCell>
 							<StyledTableCell style={{ width: "25%" }} align="center">
@@ -107,18 +93,18 @@ export default function CartScreen(props) {
 									<StyledTableRow key={p.id}>
 										<StyledTableCell align="center">
 											<img
-												style={{ width: 60, borderRadius: 10, marginRight: 10 }}
+												className="cart__image"
 												key={p.id}
 												src={p.photo}
 												alt={p.productName}
 											/>
 											<DeleteIcon
 												onClick={handleRemoveFromCart(p)}
-												style={{ color: "#363A40", cursor: "pointer" }}
+												style={{ color: "#9b9a9a", cursor: "pointer" }}
 											/>
 										</StyledTableCell>
 										<StyledTableCell align="center">
-											<div className="quantity__bar">
+											<div className="cart__quantity">
 												<span>
 													<AddIcon
 														onClick={handleAddQuantityInCart(p)}
@@ -135,13 +121,12 @@ export default function CartScreen(props) {
 											</div>
 										</StyledTableCell>
 										<StyledTableCell align="center">
-											<div style={{ color: "#757575", fontSize: 13 }}>
-												{" "}
+											<div style={{ color: "#757575", fontSize: "0.8rem" }}>
 												${p.price}
 											</div>
 										</StyledTableCell>
 										<StyledTableCell align="center">
-											<div style={{ color: "#757575", fontSize: 13 }}>
+											<div style={{ color: "#757575", fontSize: "0.8rem" }}>
 												${p.count * p.price}
 											</div>
 										</StyledTableCell>
@@ -152,24 +137,15 @@ export default function CartScreen(props) {
 					{products ? (
 						((total = products
 							.map((p) => p.count * p.price)
-							.reduce(function (
-								accumulator,
-								currentValue,
-								currentIndex,
-								array
-							) {
+							.reduce(function (accumulator, currentValue) {
 								return accumulator + currentValue;
-							},
-							0)),
+							}, 0)),
 						(
 							<TableBody>
 								<TableRow>
 									<StyledTableCell style={{ width: "25%" }}>
 										<Link to="/checkout" style={{ textDecoration: "none" }}>
-											<Button className="btn__checkout">
-												<span style={{ textTransform: "uppercase" }}>C</span>
-												heck out
-											</Button>
+											<div className="cart__text">Checkout</div>
 										</Link>
 									</StyledTableCell>
 									<StyledTableCell style={{ width: "25%" }}></StyledTableCell>

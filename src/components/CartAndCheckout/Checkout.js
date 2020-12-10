@@ -7,7 +7,6 @@ import Payment from "./Payment";
 import { checkout } from "../../reducers/payment";
 import { removeAllCart } from "../../reducers/cartManagement";
 import Thankyou from "./Thankyou";
-import "./checkout.css";
 import Grid from "@material-ui/core/Grid";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -61,7 +60,7 @@ export default function Checkout(props) {
 	};
 	let total = itemsInCart
 		.map((p) => p.count * p.price)
-		.reduce(function (accumulator, currentValue, currentIndex, array) {
+		.reduce(function (accumulator, currentValue) {
 			return accumulator + currentValue;
 		}, 0);
 	const getsShippingFee = () => {
@@ -81,87 +80,68 @@ export default function Checkout(props) {
 			<Grid container justify="center" alignItems="center" spacing={2}>
 				<div className="checkout__box">
 					<Thankyou open={open} onClose={onCloseThankyouModal} />
-					<div className="checkout__box--head"></div>
+					<div className="checkout__box--head">
+						<p className="checkout__box--head-text">Order Summary</p>
+					</div>
 					<div className="checkout__box--body">
-						<p className="checkout__box--header">Order Summary</p>
-						<p style={{ textAlign: "center" }}>Free shipping at $50</p>
-						<div>
-							<div style={{ width: "50%", marginLeft: "5%" }}>
-								Shipping to:
+						<p className="checkout__box--body-text">Free shipping at $50</p>
+						<div className="checkout__box--body-content">
+							<div>
+								Shipping to :
 								<input
-									className="checkout__box--input"
+									className="checkout__box--body--input"
 									type="text"
 									placeholder="Type location"
 									name="shippingAddress"
 									value={shippingAddress}
+									autoComplete="off"
 									onChange={onChangeShippingAddress}
 								/>
 							</div>
 
-							<div style={{ width: "50%", marginLeft: "5%" }}>
-								Delivery: within 48 hours
+							<div className="checkout__box--body-content-delivery">
+								Delivery :<span>within 48 hours</span>
 							</div>
 							<hr />
-							<div style={{ width: "50%", marginLeft: "5%" }}>
+							<div className="checkout__box--body-content-quantity">
 								Items <span>({itemsInCart.length})</span>
 							</div>
-							<div style={{ display: "flex", flexDirection: "row" }}>
-								<div style={{ width: "50%", marginLeft: "5%" }}>
-									Total before tax
-								</div>
-								<div style={{ width: "50%", textAlign: "center" }}>
-									${total}
-								</div>
+							<div className="checkout__box--body-content-tax">
+								Total before tax
+								<span>${total}</span>
 							</div>
-							<div style={{ display: "flex", flexDirection: "row" }}>
-								<div style={{ width: "50%", marginLeft: "5%" }}>
-									Shipping fee
-								</div>
-								<div style={{ width: "50%", textAlign: "center" }}>
-									${getsShippingFee()}
-								</div>
+							<div className="checkout__box--body-content-shipping">
+								Shipping fee
+								<span>${getsShippingFee()}</span>
 							</div>
-
-							<Grid container justify="flex-start" direction="row">
-								<Grid item xs={12} sm={12} md={4} lg={4}>
-									{itemsInCart && (
-										<>
-											<Button
-												variant="contained"
-												onClick={handleCheckout}
-												className="btn__placeYourOrder"
-											>
-												<span style={{ textTransform: "uppercase" }}>P</span>
-												lace your order
-											</Button>
-											<ToastContainer />
-										</>
-									)}
-								</Grid>
-
-								<Grid item xs={12} sm={12} md={4} lg={4}>
-									<h3 className="total_order">
-										Order total
-										<span style={{ marginLeft: 5 }}>
-											$ <span style={{ marginRight: 5 }}>{totalOrder}</span>
-										</span>
-									</h3>
-								</Grid>
-
-								{showPaypalButton ? (
-									<Grid item xs={12} sm={12} md={4} lg={4}>
-										<div className="paypal__button">
-											<Payment
-												amount={totalOrder}
-												currency={"USD"}
-												onSuccess={paymentHandler}
-											/>
-										</div>
-									</Grid>
-								) : (
-									<Grid item xs={12} sm={12} md={4} lg={4}></Grid>
-								)}
-							</Grid>
+							<div className="checkout__box--body-content-totalorder">
+								Order total
+								<span>${totalOrder}</span>
+							</div>
+						</div>
+						<div className="checkout__box--footer">
+							{itemsInCart && (
+								<>
+									<Button
+										variant="contained"
+										onClick={handleCheckout}
+										className="btn__placeorder"
+									>
+										<span style={{ textTransform: "uppercase" }}>P</span>
+										lace your order
+									</Button>
+									<ToastContainer />
+								</>
+							)}
+							{showPaypalButton ? (
+								<div className="paypal__button">
+									<Payment
+										amount={totalOrder}
+										currency={"USD"}
+										onSuccess={paymentHandler}
+									/>
+								</div>
+							) : null}
 						</div>
 					</div>
 				</div>
