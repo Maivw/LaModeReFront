@@ -8,11 +8,9 @@ import {
 import Navbar from "../Navbar/Navbar";
 import DeleteIcon from "@material-ui/icons/Delete";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import Divider from "@material-ui/core/Divider";
 import ZoomInIcon from "@material-ui/icons/ZoomIn";
 import Container from "@material-ui/core/Container";
 import { Link } from "react-router-dom";
-import "./FavoriteProducts.css";
 
 export default function FavoriteProducts(props) {
 	const dispatch = useDispatch();
@@ -46,70 +44,48 @@ export default function FavoriteProducts(props) {
 									alt={p.productName}
 								/>
 								<div className="wishlist__item--icons">
-									<Link
-										to={`/products/${p.id}`}
-										style={{ textDecoration: "none" }}
-									>
-										<p
-											style={{
-												fontSize: "0.7rem",
-												color: "#757575",
-												cursor: "zoom-in",
-											}}
-											onClick={getProductDetail(p, p.id)}
-										>
-											<span>
-												<ZoomInIcon style={{ fontSize: "13px" }} />
-											</span>
-											Enlarge
-										</p>
-									</Link>
-									<ShoppingBasketIcon
-										style={{
-											marginTop: -40,
-											color: "#363A40",
-											marginLeft: -70,
-											cursor: "pointer",
-										}}
-										onClick={insertItemIntoCart(p, count)}
-									/>
-									<DeleteIcon
-										style={{
-											marginTop: -40,
-											color: "#363A40",
-											marginRight: 220,
-											cursor: "pointer",
-										}}
-										onClick={handleRemoveFromFavList(p)}
-									/>
+									<div className="wishlist__item--icons-shoppingbag">
+										<ShoppingBasketIcon
+											onClick={insertItemIntoCart(p, count)}
+										/>
+									</div>
+									<div className="wishlist__item--icons-delete">
+										<DeleteIcon onClick={handleRemoveFromFavList(p)} />
+									</div>
 								</div>
+								<Link
+									to={`/products/${p.id}`}
+									style={{ textDecoration: "none" }}
+								>
+									<div
+										className="wishlist__item--icons-enlarge"
+										onClick={getProductDetail(p, p.id)}
+									>
+										<ZoomInIcon style={{ fontSize: "13px" }} />
+										Enlarge
+									</div>
+								</Link>
 							</div>
 							<div className="wishlist__item--right">
-								<p className="wishlist__item--right productName">
+								<p className="wishlist__item--right-productName">
 									{p.productName}
 								</p>
-								<p className="wishlist__item--right productPrice">
+								<p className="wishlist__item--right-productPrice">
 									<span>$</span>
 									{p.price}
 								</p>
-								<p>
+								<p className="wishlist__item--right-productCode">
 									Code:
-									<span className="wishlist__item--right productCode">
-										{p.productCode}
-									</span>
+									<span>{p.productCode}</span>
 								</p>
 
-								<p>
+								<p className="wishlist__item--right-productColor">
 									Color:
-									<span className="wishlist__item--right productColor">
-										{p.color}
-									</span>
+									<span>{p.color}</span>
 								</p>
-								<p>
+								<p className="wishlist__item--right-productDescription">
 									Description:
-									<span className="wishlist__item--right productDescription">
-										{p.description}
-									</span>
+									<span>{p.description}</span>
 								</p>
 							</div>
 						</ul>

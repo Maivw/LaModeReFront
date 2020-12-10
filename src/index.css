@@ -642,6 +642,142 @@ body {
   margin-left: 2rem;
 }
 
+.popover-navbarModal {
+  margin-top: 2rem;
+  top: 50%;
+  left: 50%;
+}
+
+.modal__text:hover {
+  color: #fb8c00;
+  transition: all 0.25s linear;
+}
+
+.navbarModal {
+  width: 30rem;
+  height: auto;
+  background-color: #eee;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  line-height: 1.7;
+}
+
+.navbarModal__sales, .navbarModal__styles {
+  color: #fb8c00;
+  font-size: 1rem;
+}
+
+.navbarModal__sale, .navbarModal__style {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #757575;
+}
+
+.navbarModal__sale:hover, .navbarModal__style:hover {
+  color: #fb8c00;
+}
+
+.navbarModal__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  min-height: 10rem;
+}
+
+.wishlist__box {
+  margin: 2rem auto;
+  background-color: white;
+  z-index: 100;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+.wishlist__items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom: 1rem;
+}
+
+.wishlist__item--left {
+  width: 40%;
+  height: auto;
+}
+
+.wishlist__item--icons {
+  width: 40%;
+  color: #9b9a9a;
+  font-size: 1rem;
+  display: flex !important;
+  justify-content: space-around !important;
+}
+
+.wishlist__item--icons-enlarge {
+  color: #9b9a9a;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.wishlist__item--image {
+  width: 10rem;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.wishlist__item--right {
+  width: 50%;
+  height: auto;
+  align-items: center;
+  font-size: 0.7rem;
+  line-height: 1.7;
+}
+
+.wishlist__item--right-productName {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wishlist__item--right-productPrice > span {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.wishlist__item--right-productColor {
+  font-size: 0.9rem;
+}
+
+.wishlist__item--right-productColor span {
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+.wishlist__item--right-productCode {
+  font-size: 0.9rem;
+}
+
+.wishlist__item--right-productCode span {
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+.wishlist__item--right-productDescription {
+  font-size: 0.9rem;
+}
+
+.wishlist__item--right-productDescription span {
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
 @media screen and (max-width: 413px) and (min-width: 280px) {
   .navbar__logo-image {
     width: 4rem;
@@ -850,6 +986,53 @@ body {
     width: 2rem;
     border-radius: 0.5rem;
     margin: 0.5rem 1rem;
+  }
+  .navbarModal {
+    width: 16rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    padding: 0.5rem;
+    line-height: 1.7;
+  }
+  .navbarModal__sales, .navbarModal__styles {
+    font-size: 0.7rem;
+  }
+  .navbarModal__sale, .navbarModal__style {
+    font-size: 0.5rem;
+  }
+  .wishlist__box {
+    width: 80% !important;
+  }
+  .wishlist__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #bdbdbd;
+    margin-bottom: 1rem;
+  }
+  .wishlist__item--left {
+    width: 100%;
+    height: auto;
+  }
+  .wishlist__item--image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .wishlist__item--icons {
+    width: 100%;
+  }
+  .wishlist__item--icons-enlarge {
+    margin-left: 2rem;
+  }
+  .wishlist__item--right {
+    width: 100%;
+    margin: 0 0 0.5rem 0.5rem;
   }
 }
 
@@ -1066,6 +1249,53 @@ body {
     width: 2rem;
     border-radius: 0.5rem;
     margin: 0.5rem 1rem;
+  }
+  .navbarModal {
+    width: 24rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    padding: 0.7rem;
+    line-height: 1.7;
+  }
+  .navbarModal__sales, .navbarModal__styles {
+    font-size: 0.9rem;
+  }
+  .navbarModal__sale, .navbarModal__style {
+    font-size: 0.7rem;
+  }
+  .wishlist__box {
+    width: 80% !important;
+  }
+  .wishlist__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #bdbdbd;
+    margin-bottom: 1rem;
+  }
+  .wishlist__item--left {
+    width: 100%;
+    height: auto;
+  }
+  .wishlist__item--image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .wishlist__item--icons {
+    width: 100%;
+  }
+  .wishlist__item--icons-enlarge {
+    margin-left: 2rem;
+  }
+  .wishlist__item--right {
+    width: 100%;
+    margin: 0 0 0.5rem 0.5rem;
   }
 }
 

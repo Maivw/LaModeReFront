@@ -1,20 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
 import Popover from "@material-ui/core/Popover";
-import "./modal.css";
-
-const useStyles = makeStyles((theme) => ({
-	typography: {
-		padding: theme.spacing(2),
-		backgroundColor: "#e0e0e0",
-		alignItems: "center",
-		width: 300,
-	},
-}));
 
 export default function ModalMenProduct(props) {
-	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = React.useState(null);
 
 	const handleClick = (event) => {
@@ -29,14 +17,15 @@ export default function ModalMenProduct(props) {
 	const id = open ? "simple-popover" : undefined;
 
 	return (
-		<div>
+		<div div className="modal">
 			<div
 				aria-describedby={id}
 				variant="contained"
 				color="primary"
 				onClick={handleClick}
+				className="modal__text"
 			>
-				<span>Men</span>
+				Men
 			</div>
 			<Popover
 				id={id}
@@ -51,94 +40,75 @@ export default function ModalMenProduct(props) {
 					vertical: "top",
 					horizontal: "center",
 				}}
+				className="popover-navbarModal"
 			>
-				<div className="navbar--modal">
-					<div className={classes.typography}>
-						<div className="colModalRight">
-							<strong>
-								<span className="textModal">Styles</span>
-							</strong>
+				<div className="navbarModal navbarModal-men">
+					<div className="navbarModal__left">
+						<div className="navbarModal__styles">Styles</div>
+						<div>
+							<Link to="/productlist/graphictee" className="navbarModal__style">
+								Graphictee
+							</Link>
 							<div>
-								<Link
-									to="/productlist/graphictee"
-									style={{ textDecoration: "none" }}
-								>
-									<span
-										className="textModal"
-										style={{ textDecoration: "none" }}
-									>
-										Graphictee
-									</span>
-								</Link>
-							</div>
-							<div>
-								<Link
-									to="/productlist/bottoms"
-									style={{ textDecoration: "none" }}
-								>
-									<span className="textModal">Bottom</span>
+								<Link to="/productlist/bottoms" className="navbarModal__style">
+									Bottom
 								</Link>
 							</div>
 							<div>
 								<Link
 									to="/productlist/jeans & demin"
-									style={{ textDecoration: "none" }}
+									className="navbarModal__style"
 								>
-									<span className="textModal">Jeans - Demin</span>
+									Jeans - Demin
 								</Link>
 							</div>
 							<div>
-								<Link
-									to="/productlist/hoodies"
-									style={{ textDecoration: "none" }}
-								>
-									<span className="textModal">Hoodies</span>
+								<Link to="/productlist/hoodies" className="navbarModal__style">
+									Hoodies
 								</Link>
 							</div>
 						</div>
 					</div>
-					<div className={classes.typography}>
-						<strong>
-							<span className="textModal">Sales</span>
-						</strong>
+					<div className="navbarModal__right">
+						<div className="navbarModal__sales">Sales</div>
 						<div>
 							<Link
 								to="/products/promotion/men/10"
-								style={{ textDecoration: "none" }}
+								className="navbarModal__sale"
 							>
-								<span className="textModal">10%</span>
+								10%
 							</Link>
 						</div>
 						<div>
 							<Link
 								to="/products/promotion/men/20"
-								style={{ textDecoration: "none" }}
+								className="navbarModal__sale"
 							>
-								<span className="textModal">20%</span>
+								20%
 							</Link>
 						</div>
 						<div>
 							<Link
 								to="/products/promotion/men/30"
-								style={{ textDecoration: "none" }}
+								className="navbarModal__sale"
 							>
-								<span className="textModal">30%</span>
+								30%
 							</Link>
 						</div>
 						<div>
 							<Link
 								to="/products/promotion/men/50"
-								style={{ textDecoration: "none" }}
+								className="navbarModal__sale"
 							>
-								<span className="textModal">50%</span>
+								50%
 							</Link>
 						</div>
 						<div>
 							<Link
 								to="/products/promotion/men/70"
-								style={{ textDecoration: "none" }}
+								className="navbarModal__sale"
 							>
-								<span className="textModal">70%</span>
+								70%
 							</Link>
 						</div>
 					</div>

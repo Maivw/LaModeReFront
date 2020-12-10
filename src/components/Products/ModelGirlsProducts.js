@@ -1,19 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
 import Popover from "@material-ui/core/Popover";
-import "./modal.css";
 
-const useStyles = makeStyles((theme) => ({
-	typograhy: {
-		padding: theme.spacing(2),
-		backgroundColor: "#e0e0e0",
-		width: 300,
-		alignItems: "center",
-	},
-}));
 export default function ModalGirlsProduct(props) {
-	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = React.useState(null);
 
 	const handleClick = (event) => {
@@ -28,14 +17,15 @@ export default function ModalGirlsProduct(props) {
 	const id = open ? "simple-popover" : undefined;
 
 	return (
-		<div className="navbar--modal">
+		<div div className="modal">
 			<div
 				aria-describedby={id}
 				variant="contained"
 				color="primary"
 				onClick={handleClick}
+				className="modal__text"
 			>
-				<span>Girls</span>
+				Girls
 			</div>
 			<Popover
 				id={id}
@@ -50,77 +40,66 @@ export default function ModalGirlsProduct(props) {
 					vertical: "top",
 					horizontal: "center",
 				}}
+				className="popover-navbarModal"
 			>
-				<div className="navbar--modal">
-					<div className={classes.typograhy}>
-						<div className="colModalRight">
-							<span className="textModal">
-								<strong>Styles</strong>
-							</span>
-							<Link
-								to="/productlist/swearshirt"
-								style={{ textDecoration: "none" }}
-							>
-								<div>
-									<span className="textModal">Swearshirts</span>
-								</div>
+				<div div className="navbarModal navbarModal-girl">
+					<div className="navbarModal__left">
+						<div className="navbarModal__styles">Styles</div>
+						<div>
+							<Link to="/productlist/swearshirt" className="navbarModal__style">
+								Swearshirts
 							</Link>
+						</div>
+
+						<div>
 							<Link
 								to="/productlist/kid-dresses"
-								style={{ textDecoration: "none" }}
+								className="navbarModal__style"
 							>
-								<div>
-									<span className="textModal">Kid-Dress</span>
-								</div>
+								Kid-Dress
 							</Link>
 						</div>
 					</div>
-					<div className={classes.typograhy}>
+					<div className="navbarModal__right">
+						<div className="navbarModal__sales">Sales </div>
 						<div>
-							<span className="textModal">
-								<strong>Sales</strong>
-							</span>
 							<Link
 								to="/products/promotion/girls/10"
-								style={{ textDecoration: "none" }}
+								className="navbarModal__sale"
 							>
-								<div>
-									<span className="textModal">10%</span>
-								</div>
+								10%
 							</Link>
-
+						</div>
+						<div>
 							<Link
 								to="/products/promotion/girls/20"
-								style={{ textDecoration: "none" }}
+								className="navbarModal__sale"
 							>
-								<div>
-									<span className="textModal">20%</span>
-								</div>
+								20%
 							</Link>
-
+						</div>
+						<div>
 							<Link
 								to="/products/promotion/girls/30"
-								style={{ textDecoration: "none" }}
+								className="navbarModal__sale"
 							>
-								<div>
-									<span className="textModal">30%</span>
-								</div>
+								30%
 							</Link>
+						</div>
+						<div>
 							<Link
 								to="/products/promotion/girls/50"
-								style={{ textDecoration: "none" }}
+								className="navbarModal__sale"
 							>
-								<div>
-									<span className="textModal">50%</span>
-								</div>
+								50%
 							</Link>
+						</div>
+						<div>
 							<Link
 								to="/products/promotion/girls/70"
-								style={{ textDecoration: "none" }}
+								className="navbarModal__sale"
 							>
-								<div>
-									<span className="textModal">70%</span>
-								</div>
+								70%
 							</Link>
 						</div>
 					</div>
